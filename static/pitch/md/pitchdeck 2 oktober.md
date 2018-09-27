@@ -56,13 +56,13 @@ What we did to test the concept:
 - SOM: ....
 
 **Team**
-- Elise Marcus: Founder and sustainability designer 
-- Eric Kamst: Microbiologist  - scientific quality improving our sru
-- Alexey Shifman: Hardware engineer 
-- Omotola Bolarin: Data strategist 
-- Paul Noordhuizen: Software architect. 
+- Elise Marcus: Founder and sustainability designer *guiding the compa
+- Eric Kamst: Microbiologist  - *scientific quality  to improve the sensors and analyses*
+- Alexey Shifman: Hardware engineer  *Creating scalable and sustainable sensors for data-collection kit*
+- Omotola Bolarin: Data strategist *smart strategies for visualizing and analyzing the data*
+- Paul Noordhuizen: Software architect. *
 
 **
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODEzNjIxNCwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbLTMwMjcwNjQ0NSwtMTgzNDQwNDIxXX0=
 -->
