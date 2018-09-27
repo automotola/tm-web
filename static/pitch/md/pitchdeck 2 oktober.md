@@ -57,8 +57,10 @@ What we did to test the concept:
 
 **Team**
 - Elise Marcus: Founder and sustainability designer
-- Eric Kamst: Microbioloog
-- 
+- Eric Kamst: Microbiologist
+- Alexey Shifman: Hardware engineer
+- Omotola Bolarin: Data strategist
+- Paul Noordhuis
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI3Njg0MzAxLC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbMTgyMDUyNTg2MCwtMTgzNDQwNDIxXX0=
 -->
