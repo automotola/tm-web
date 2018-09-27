@@ -13,7 +13,15 @@ environmental health through a community-based approach.
 **Product & User**
 - We offer two products: 
 - The consumer product: a Data collection kit with free Smartphone application.
-- The business product: A data analytics platform, with sensor maintainance service. 
+- The business product: A data analytics platform, Multiple data collection kits, with sensor maintenance service. 
+
+**How does it work**
+- ...
+- ...
+
+**Unique products/insights**
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDcxMTY4MSwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbLTYyMTEzMDU5MywtMTgzNDQwNDIxXX0=
 -->
