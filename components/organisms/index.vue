@@ -4,7 +4,7 @@
       graph
       table
     template(v-if="options.scene === true") 
-      field
+      scene
       table
     template(v-if="options.map === true") 
       map
@@ -16,8 +16,8 @@
 <script>
 import scene from '~/components/organisms/scene'
 import graph from '~/components/organisms/graph'
-import map from '~/components/organisms/scene'
-import network from '~/components/organisms/scene'
+import map from '~/components/organisms/map'
+import network from '~/components/organisms/network'
 
 import table from '~/components/molecules/table'
 
@@ -26,7 +26,8 @@ export default {
     graph,
     scene,
     map,
-    network
+    network,
+    table
   },
   props: [
     'options'
