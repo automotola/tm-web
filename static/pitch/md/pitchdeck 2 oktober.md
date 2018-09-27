@@ -48,6 +48,17 @@ What we did to test the concept:
 
 **Businessmodel**
 - Pay what you use
+- Consumer:
+- Business:
+
+- TAM: ......
+- SAM: .....
+- SOM: ....
+
+**Team**
+- Elise Marcus: Founder and sustainability designer
+- Eric Kamst: Microbioloog
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODA5MzM4NjcsLTE4MzQ0MDQyMV19
+eyJoaXN0b3J5IjpbNTI3Njg0MzAxLC0xODM0NDA0MjFdfQ==
 -->
