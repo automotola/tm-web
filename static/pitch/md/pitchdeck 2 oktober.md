@@ -57,10 +57,12 @@ What we did to test the concept:
 
 **Team**
 - Elise Marcus: Founder and sustainability designer 
-- Eric Kamst: Microbiologist 
+- Eric Kamst: Microbiologist  - scientific quality improving our sru
 - Alexey Shifman: Hardware engineer 
 - Omotola Bolarin: Data strategist 
-- Paul Noordhuizen: Software architect.  
+- Paul Noordhuizen: Software architect. 
+
+**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4OTgwNTk4LC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbMTIwODEzNjIxNCwtMTgzNDQwNDIxXX0=
 -->
