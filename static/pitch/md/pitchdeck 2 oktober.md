@@ -79,8 +79,10 @@ Working on a prototype and developing proof of concept
 	- hardware
 	- software
 	- Team
+- pilot projects
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMjU1OTAyLC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbLTE0NTEzMzAzOTUsLTE4MzQ0MDQyMV19
 -->
