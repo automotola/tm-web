@@ -56,11 +56,11 @@ What we did to test the concept:
 - SOM: ....
 
 **Team**
-- Elise Marcus: Founder and sustainability designer
-- Eric Kamst: Microbiologist *"Let's do this."*
-- Alexey Shifman: Hardware engineer "Let's do this."*
-- Omotola Bolarin: Data strategist "Let's do this."*
-- Paul Noordhuizen: Software architect "Let's do this."
+- Elise Marcus: Founder and sustainability designer 
+- Eric Kamst: Microbiologist 
+- Alexey Shifman: Hardware engineer 
+- Omotola Bolarin: Data strategist 
+- Paul Noordhuizen: Software architect.  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1ODQwMjQwNCwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbMzg4OTgwNTk4LC0xODM0NDA0MjFdfQ==
 -->
