@@ -60,9 +60,9 @@ What we did to test the concept:
 - Eric Kamst: Microbiologist  - *scientific quality  to improve the sensors and analyses*
 - Alexey Shifman: Hardware engineer  -*Creating scalable and sustainable sensors for data-collection kit*
 - Omotola Bolarin: Data strategist  -*smart strategies for visualizing and analyzing the data and product*
-- Paul Noordhuizen: Software architect. -*Building towards a marketable and in software product*
+- Paul Noordhuizen: Software architect. -*Building towards a marketable and innovative software product*
 
 **
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjc1NzgyNiwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbMTMwODI0NjgzNCwtMTgzNDQwNDIxXX0=
 -->
