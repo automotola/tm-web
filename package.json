@@ -13,12 +13,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/bulma": "^1.2.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
     "feathers": "^2.0.3",
     "feathers-configuration": "^0.3.3",
-    "@nuxtjs/bulma": "^1.2.0",
-    "@nuxtjs/axios": "^5.0.0"
+    "jquery": "^3.3.1",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

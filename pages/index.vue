@@ -1,5 +1,5 @@
 <template lang="pug">
-  templates Hello!
+  organisms Hello!
 </template>
 <script>
 import organisms from '~/components/organisms'
