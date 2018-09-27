@@ -1,6 +1,6 @@
 <template>
     <div id="cards">
-        <section v-for="card in cards" :key="card.id" class="download bg-primary text-center" v-bind:style="{ backgroundImage: 'url(' + card.image + ')' }">
+        <section v-for="card in cards" :key="card.id" class="slide text-center" v-bind:style="{ backgroundImage: 'url(' + card.image + ')' }">
         <div class="container">
             <div class="row">
             <div class="col-md-12 mx-auto">
