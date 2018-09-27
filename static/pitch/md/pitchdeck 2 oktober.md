@@ -22,7 +22,7 @@ environmental health through a community-based approach.
 - Our social eco-data network utilizes machine learning in processing, analyzing and visualizing data, to push the boundaries of environmental improvement.
 
 **Current state**
-- “We are leaving the pre-seed stage:  
+- “We are leaving the pre-seed stage and entering the seed stage"  
 Working on a prototype and developing proof of concept
 
 What we did to test the concept:
@@ -62,7 +62,27 @@ What we did to test the concept:
 - Omotola Bolarin: Data strategist  -*smart strategies for visualizing and analyzing the data and product*
 - Paul Noordhuizen: Software architect. -*Building towards a marketable and innovative software product*
 
-**
+**Next steps**
+- Next steps:  
+Sensors:  * Improving the air sensor design with suitable chips and developing sustainable material.  
+* Creating a method for developing sustainable sensors: soil, water, plants  
+* Creating soil, water, plant sensors
+
+Software:
+
+* Developing software products: pulse and horizon
+
+* Testing software and create iterations
+
+* Research AI + AR + NLG
+
+Team:
+
+* Hiring two extra developers to scale up the software, test for bugs and maintenance
+
+* expanding hardware team to scale up sensors
+
+Business: marketing/ brand development / testcases/pilots/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwODI0NjgzNCwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbMTk1MDE2ODM1OSwtMTgzNDQwNDIxXX0=
 -->
