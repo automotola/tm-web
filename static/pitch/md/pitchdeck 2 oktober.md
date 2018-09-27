@@ -6,8 +6,12 @@ environmental health through a community-based approach.
 - We call it the: social eco-data network
 
 
+
 **Vision**
--
+- We would like to see a world where people create a healthier ecosystem in collaboration with each other and by using the latest technology to maintain and improve their surroundings.
+
+**Product & User**
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzODk3NDM2LC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbMTM5MzY0MTQ1NCwtMTgzNDQwNDIxXX0=
 -->
