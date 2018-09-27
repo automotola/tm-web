@@ -25,23 +25,15 @@ environmental health through a community-based approach.
 - “We are leaving the pre-seed stage and entering the seed stage"  
 Working on a prototype and developing proof of concept
 
-What we did to test the concept:
-
-* Create a prototype and test this with users (installations and exhibitions around 800 people)
-
-* Develop a member base (network 100 members)
-
-* Pilot with existing sensors in Zwolle and Utrecht (collaboration with RIVM)
-
-* Expanding our team : scientists and software
-
-* Prototype sensor 3d printing: multiple iterations -> now developing chips
-
-* Creating a design and language– multiple iterations (ready for making)
-
-* Branding strategy went through research fase and is being developed
-
-* Building the platform based on pilot products”
+- What we did to test the concept:
+	* Create a prototype and test this with users (installations and exhibitions around 800 people)
+	* Develop a member base (network 100 members)
+	* Pilot with existing sensors in Zwolle and Utrecht (collaboration with RIVM)
+	* Expanding our team : scientists and software
+	* Prototype sensor 3d printing: multiple iterations -> now developing chips
+	* Creating a design and language– multiple iterations (ready for making)
+	* Branding strategy went through research fase and is being developed
+	* Building the platform based on pilot products
 
 **Growing market**
 - ...
@@ -64,9 +56,10 @@ What we did to test the concept:
 
 **Next steps**
 - Next steps:  
-Sensors:  * Improving the air sensor design with suitable chips and developing sustainable material.  
-Creating a method for developing sustainable sensors: soil, water, plants  
-Creating soil, water, plant sensors
+- Sensors: 
+	-  Improving the air sensor design with suitable chips and developing sustainable material.  
+	- Creating a method for developing sustainable sensors: soil, water, plants  
+	- Creating soil, water, plant sensors
 
 - Software:
 	- Developing software products: pulse and horizon
@@ -78,5 +71,5 @@ Creating soil, water, plant sensors
 	- Expanding hardware team to scale up sensors
 Business: marketing/ brand development / testcases/pilots/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY4MzY3NTg2LC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbMTY4MTMyODc3NCwtMTgzNDQwNDIxXX0=
 -->
