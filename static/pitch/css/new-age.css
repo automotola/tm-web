@@ -54,6 +54,8 @@ p {
 
 section {
   padding: 100px 0;
+  margin-top: 60px;
+  margin-bottom: 200px;
 }
 
 section h2 {
@@ -71,14 +73,14 @@ section h2 {
 }
 
 #mainNav .navbar-brand {
-  color: #fdcc52;
+  color: #4dc0b5;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #fcbd20;
+  color: #4dc0b5;
 }
 
 #mainNav .navbar-toggler {
@@ -95,7 +97,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
+  color: #4dc0b5 !important;
   background-color: transparent;
 }
 
@@ -110,7 +112,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: #4dc0b5;
 }
 
 @media (min-width: 992px) {
@@ -148,7 +150,7 @@ section h2 {
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #4dc0b5;
   }
 }
 
@@ -202,12 +204,15 @@ header.masthead .device-container .screen img {
   }
 }
 
-section.download {
+section.slide {
   position: relative;
   padding: 150px 0;
+  background-repeat: no-repeat;
+  background-color: #000 !important;
+  background-position: right;
 }
 
-section.download h2 {
+section.slide h2 {
   font-size: 50px;
   margin-top: 0;
 }
@@ -435,4 +440,14 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .btn-xl {
   font-size: 11px;
   padding: 15px 45px;
+}
+
+.card {
+  border-radius: 1em;
+  font-family: 'Quicksand';
+}
+
+.card-title {
+  font-weight: 700;
+  text-transform: uppercase;
 }
