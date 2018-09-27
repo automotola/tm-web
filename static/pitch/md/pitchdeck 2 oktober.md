@@ -12,8 +12,8 @@ environmental health through a community-based approach.
 
 **Product & User**
 - We offer two products: 
-- The consumer product: a Data collection kit with free Smartphone application.
-- The business product: A data analytics platform, Multiple data collection kits, with sensor maintenance service. 
+	- The consumer product: a Data collection kit with free Smartphone application.
+	- The business product: A data analytics platform, Multiple data collection kits, with sensor maintenance service. 
 
 **How does it work**
 - We provide our users with sensory equipment and a digital platform with which they can gather data that will help them understand and improve the health of their local ecosystem.
@@ -69,7 +69,18 @@ Working on a prototype and developing proof of concept
 - Team:
 	- Hiring two extra developers to scale up the software, test for bugs and maintenance
 	- Expanding hardware team to scale up sensors
-Business: marketing/ brand development / testcases/pilots/
+
+- Business: 
+	- brand development
+	-  testcases / pilots
+
+**Seeking**
+- investment for:
+	- hardware
+	- software
+	- Team
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTMyODc3NCwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbMTUwMjU1OTAyLC0xODM0NDA0MjFdfQ==
 -->
