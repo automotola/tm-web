@@ -44,7 +44,10 @@ What we did to test the concept:
 * Building the platform based on pilot products”
 
 **Growing market**
-- 
+- ...
+
+**Businessmodel**
+- Pay what you use
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNjQ5ODE4OSwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbLTEzODA5MzM4NjcsLTE4MzQ0MDQyMV19
 -->
