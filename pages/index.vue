@@ -2,11 +2,21 @@
   templates Hello!
 </template>
 <script>
-import templates from '~/components/templates'
+import organisms from '~/components/organisms'
 export default {
   layout: 'base',
   components: {
-    templates
+    organisms
+  },
+  data () {
+    return {
+      options: {
+        graph: true,
+        scene: true,
+        field: true,
+        map: true,
+      }
+    }
   }
 }
 </script>

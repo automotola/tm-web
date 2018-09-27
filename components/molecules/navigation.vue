@@ -20,6 +20,9 @@
 export default {
   props: [
     'brandName'
-  ]
+  ],
+  data () {
+    
+  }
 }
 </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  #map CANVAS
+  #map SCENE
 </template>
 <script>
 export default {
