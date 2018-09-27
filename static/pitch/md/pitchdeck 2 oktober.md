@@ -43,7 +43,8 @@ What we did to test the concept:
 
 * Building the platform based on pilot products”
 
-**
+**Growing market**
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NTcxODI3NywtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbLTMwNjQ5ODE4OSwtMTgzNDQwNDIxXX0=
 -->
