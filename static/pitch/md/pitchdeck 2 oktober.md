@@ -12,7 +12,8 @@ environmental health through a community-based approach.
 
 **Product & User**
 - We offer two products: 
-- A ba
+- The consumer product: a Data collection kit with free Smartphone application.
+- The business product: A 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MDI5MzkxLC0xODM0NDA0MjFdfQ==
+eyJoaXN0b3J5IjpbMTE5MTgzOTUxLC0xODM0NDA0MjFdfQ==
 -->
