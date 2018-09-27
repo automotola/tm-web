@@ -65,24 +65,18 @@ What we did to test the concept:
 **Next steps**
 - Next steps:  
 Sensors:  * Improving the air sensor design with suitable chips and developing sustainable material.  
-* Creating a method for developing sustainable sensors: soil, water, plants  
-* Creating soil, water, plant sensors
+Creating a method for developing sustainable sensors: soil, water, plants  
+Creating soil, water, plant sensors
 
-Software:
+- Software:
+	- Developing software products: pulse and horizon
+	- Testing software and create iterations
+	- Research AI + AR + NLG
 
-* Developing software products: pulse and horizon
-
-* Testing software and create iterations
-
-* Research AI + AR + NLG
-
-Team:
-
-* Hiring two extra developers to scale up the software, test for bugs and maintenance
-
-* expanding hardware team to scale up sensors
-
+- Team:
+	- Hiring two extra developers to scale up the software, test for bugs and maintenance
+	- Expanding hardware team to scale up sensors
 Business: marketing/ brand development / testcases/pilots/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDE2ODM1OSwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbOTY4MzY3NTg2LC0xODM0NDA0MjFdfQ==
 -->
