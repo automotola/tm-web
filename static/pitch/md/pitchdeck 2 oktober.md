@@ -16,12 +16,34 @@ environmental health through a community-based approach.
 - The business product: A data analytics platform, Multiple data collection kits, with sensor maintenance service. 
 
 **How does it work**
-- ...
-- ...
+- We provide our users with sensory equipment and a digital platform with which they can gather data that will help them understand and improve the health of their local ecosystem.
 
 **Unique products/insights**
--
--
+- Our social eco-data network utilizes machine learning in processing, analyzing and visualizing data, to push the boundaries of environmental improvement.
+
+**Current state**
+- “We are leaving the pre-seed stage:  
+Working on a prototype and developing proof of concept
+
+What we did to test the concept:
+
+* Create a prototype and test this with users (installations and exhibitions around 800 people)
+
+* Develop a member base (network 100 members)
+
+* Pilot with existing sensors in Zwolle and Utrecht (collaboration with RIVM)
+
+* Expanding our team : scientists and software
+
+* Prototype sensor 3d printing: multiple iterations -> now developing chips
+
+* Creating a design and language– multiple iterations (ready for making)
+
+* Branding strategy went through research fase and is being developed
+
+* Building the platform based on pilot products”
+
+**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMTEzMDU5MywtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbMTQ3NTcxODI3NywtMTgzNDQwNDIxXX0=
 -->
