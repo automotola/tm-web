@@ -82,7 +82,8 @@ Working on a prototype and developing proof of concept
 - pilot projects
 
 
+*visit www.motherearthnetwork.net*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTEzMzAzOTUsLTE4MzQ0MDQyMV19
+eyJoaXN0b3J5IjpbODQyNzQ4MzczLC0xODM0NDA0MjFdfQ==
 -->
