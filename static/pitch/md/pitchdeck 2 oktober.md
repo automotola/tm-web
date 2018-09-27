@@ -57,10 +57,10 @@ What we did to test the concept:
 
 **Team**
 - Elise Marcus: Founder and sustainability designer
-- Eric Kamst: Microbiologist
-- Alexey Shifman: Hardware engineer
-- Omotola Bolarin: Data strategist
-- Paul Noordhuis
+- Eric Kamst: Microbiologist *"Let's do this."*
+- Alexey Shifman: Hardware engineer "Let's do this."*
+- Omotola Bolarin: Data strategist "Let's do this."*
+- Paul Noordhuizen: Software architect "Let's do this."
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDUyNTg2MCwtMTgzNDQwNDIxXX0=
+eyJoaXN0b3J5IjpbLTY1ODQwMjQwNCwtMTgzNDQwNDIxXX0=
 -->
