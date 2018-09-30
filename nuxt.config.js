@@ -29,9 +29,12 @@ module.exports = {
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [],
+** Plugins to load before mounting the App
+*/
+  plugins: [
+    // '~/plugins/vue-editable',
+    '~/plugins/vue-axios'
+  ],
 
   /*
   ** Nuxt.js modules
@@ -47,7 +50,10 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    proxyHeaders: false,
+    credentials: false
   },
+
 
   /*
   ** Build configuration

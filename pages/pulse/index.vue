@@ -1,5 +1,5 @@
 <template lang="pug">
-  organism(:option="option") {{ option }}
+  organism(:options="options")
 </template>
 <script>
 import organism from '~/components/organisms'
@@ -10,7 +10,7 @@ export default {
   },
   data: () => {
     return {
-      option: 'none'
+      options: null
     }
   }
 }

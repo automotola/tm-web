@@ -1,3 +1,3 @@
 <template lang="pug">
-  span ORGANISM
+  span MOLECULE
 </template>

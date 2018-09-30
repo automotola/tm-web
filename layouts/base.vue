@@ -4,7 +4,6 @@
       navigation(:brandName="brandName")
     main
       nuxt
-    footer FOOTER!
 </template>
 
 <script>
@@ -15,7 +14,7 @@ export default {
   },
   data () {
     return {
-      brandName: 'Maria Network'
+      brandName: 'Maria Network',
     }
   }
 }
