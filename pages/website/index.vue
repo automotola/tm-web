@@ -1,5 +1,5 @@
 <template lang="pug">
-  presentation(:slides="slides")
+  presentation(:slides="slides" :options="options")
 </template>
 <script>
 import presentation from '~/components/presentation'
@@ -9,8 +9,11 @@ const archieml = require('archieml-peg')
 const parsed = archieml.load(slideNotes)
 console.log(parsed)
 
-
 export default {
+  layout: 'base',
+  props: [
+    'options'
+  ],
   components: {
     presentation
   },

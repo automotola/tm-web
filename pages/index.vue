@@ -1,12 +1,12 @@
 <template lang="pug">
-  organisms Hello!
+  website(:options="options")
 </template>
 <script>
-import organisms from '~/components/organisms'
+import website from '~/pages/website'
 export default {
   layout: 'base',
   components: {
-    organisms
+    website
   },
   data () {
     return {
@@ -14,7 +14,7 @@ export default {
         graph: true,
         scene: true,
         field: true,
-        map: true,
+        location: true,
       }
     }
   }

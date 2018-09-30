@@ -10,7 +10,8 @@ export default {
     slide
   },
   props: [
-    'slides'
+    'slides',
+    'options'
   ]
 }
 </script>

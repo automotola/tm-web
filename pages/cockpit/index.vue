@@ -1,10 +1,18 @@
 <template lang="pug">
-  templates Hello!
+  organism(:option="option") {{ option }}
 </template>
 <script>
-import map from '~/components/organisms/map'
+import organism from '~/components/organisms'
 export default {
-  layout: 'base'
+  layout: 'base',
+  components: {
+    organism
+  },
+  data: () => {
+    return {
+      option: 'none'
+    }
+  }
 }
 </script>
 

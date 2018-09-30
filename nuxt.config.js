@@ -40,24 +40,13 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/bulma'
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-  },
-
-  /*
-  ** Markdown module configuration
-  */
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    injected: true
   },
 
   /*
@@ -83,11 +72,11 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-        config.module.rules.push({
-          test: /\.txt$/,
-          use: 'raw-loader'
-        })
       }
+      config.module.rules.push({
+        test: /\.txt$/,
+        use: 'raw-loader'
+      })
     }
   }
 }

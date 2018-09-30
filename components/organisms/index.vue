@@ -1,31 +1,34 @@
 <template lang="pug">
   .container
-    template(v-if="options.graph === true") 
+    template(v-if="option.graph === true") 
       graph
       table
-    template(v-if="options.scene === true") 
+    template(v-else-if="option.scene === true") 
       scene
       table
-    template(v-if="options.map === true") 
+    template(v-else-if="option.location === true") 
       map
       table
-    template(v-if="options.netowrk === true") 
+    template(v-else-if="option.netowrk === true") 
       network
       table
+    template(v-else)
+      span Hello!
 </template>
 <script>
 import scene from '~/components/organisms/scene'
 import graph from '~/components/organisms/graph'
-import map from '~/components/organisms/map'
+import location from '~/components/organisms/location'
 import network from '~/components/organisms/network'
 
 import table from '~/components/molecules/table'
 
 export default {
+  name: 'organism',
   components: {
     graph,
     scene,
-    map,
+    location,
     network,
     table
   },

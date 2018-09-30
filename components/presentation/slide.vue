@@ -1,7 +1,6 @@
 <template lang="pug">
-  .box
-    .content 
-      vue-markdown {{ content }}
+  .panel
+    vue-markdown {{ content }}
 </template>
 <script>
 import VueMarkdown from 'vue-markdown'
