@@ -3,7 +3,7 @@
       .navbar-brand
         a.navbar-item
           figure
-            img(src="~/assets/img/logo.png")
+            img(src="/img/logo.png").rotated
         a.navbar-burger(role="button" aria-label="main navigation" aria-expanded="false")
           span(aria-hidden="true")
           span(aria-hidden="true")
@@ -14,6 +14,7 @@
         .navbar-end
           a.navbar-item(:href="item.route" v-for="item in menu" :key="item.index") {{ item.label }}
 </template>
+
 <script>
 export default {
   props: [

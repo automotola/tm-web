@@ -1,12 +1,12 @@
 <template lang="pug">
-  website(:options="options")
+.panel
+  onepage(:content="content")
 </template>
 <script>
-import website from '~/pages/website'
+import onepage from '~/components/templates/onepage'
 export default {
-  layout: 'base',
   components: {
-    website
+    onepage
   },
   data () {
     return {
@@ -15,8 +15,23 @@ export default {
         scene: true,
         field: true,
         location: true,
+      },
+      content: {
+        hero: true
       }
     }
-  }
+  },
+  /*
+  ** Headers of the page
+  */
+  head: {
+    title: '2Tango | Signs',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
 }
 </script>

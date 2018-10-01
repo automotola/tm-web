@@ -1,20 +1,31 @@
 <template lang="pug">
-  organism(:options="options" :records="records")
+.panel
+  onepage(:brandName="brandName" :data="results.series")
+  // organism(:options="options" :records="records")
 </template>
 <script>
 import organism from '~/components/organisms'
-require('./index.js')
+import onepage from '~/components/templates/onepage.vue'
+
+import { legend } from './index'
+const R = require('rambda')
+const moment = require('moment')
+const setup = require('./index')
+console.log(setup.legend)
 export default {
-  layout: 'base',
   props: [
-    'data'
+    'data',
+    'brandName'
   ],
   components: {
-    organism
+    organism,
+    onepage
   },
   data() {
     return {
       options: null,
+      response: '',
+      results: {},
       records: {
         horizon: "horizon"
       },
@@ -32,7 +43,7 @@ export default {
       }
     }
   },
-    created() {
+  created() {
     this.getItems()
   },
   methods: {
@@ -44,7 +55,7 @@ export default {
         legend.database[1][1],
         legend.database[1][2]
       ]
-      const c = true
+      const c = false
       const query = [
         'SELECT val3 FROM KIT_RTD01 WHERE time > now() - 1h GROUP BY id ',
         'SELECT time, val0, val3 FROM KIT_RTD01 WHERE time > now() - 1h GROUP BY id',
@@ -55,23 +66,24 @@ export default {
       const q = encodeURIComponent(query[0])
       const request = `${host}/query?u=${u}&p=${p}&db=${db[1]}&chunked=${c}&q=${q}`
       const response = await this.$axios.$get(request)
-      console.log(response)
-      const rPulse = response.results[0]
-      // const rPulseSeries = R.pluck('series')(rPulse)
-      console.log('Pulse', rPulse)
+      // console.log('Response', response.results[0])
+      const results = response.results[0]
 
-      const pulse = rPulse.series[0].values
-      console.log('PulseSeries', pulse)
+      // const rPulseSeries = R.pluck('series')(rPulse)
+
+      // const pulse = rPulse.series[0].values
+      // console.log('PulseSeries', pulse)
+      this.results = results
       // const rPulseSeriesTime = R.take(1, rPulse.series[0].values)
 
-      const rPulseTimestampUTC = R.take(1, rPulse.series[0].values[0])
-      console.log(rPulseTimestampUTC[0])
+      // const rPulseTimestampUTC = R.take(1, rPulse.series[0].values[0])
+      // console.log(rPulseTimestampUTC[0])
       // const local = moment(rPulseTimestampUTC).format('YYYY-MM-DD HH:mm:ss')
       // console.log(local)
-      const natural = moment(rPulseTimestampUTC[0]).format('MMMM Do YYYY, h:mm:ss a')
-      const relative = moment(rPulseTimestampUTC[0]).fromNow()
+      // const natural = moment(rPulseTimestampUTC[0]).format('MMMM Do YYYY, h:mm:ss a')
+      // const relative = moment(rPulseTimestampUTC[0]).fromNow()
 
-      console.log(relative, natural)
+      // console.log("HELLO", relative, natural, "WORLD")
 
       /*  const sideA = []
       const resultA = R.forEach(
@@ -86,16 +98,16 @@ export default {
       const arrayRealTime = R.map(realTime, arrayTime)
       console.log(arrayRealTime) */
 
-      const selectID = x => R.path('tags.id', x)
-      const sensors = R.map(selectID, rPulse.series)
-      console.dir(sensors)
+      // const selectID = x => R.path('tags.id', x)
+      // const sensors = R.map(selectID, rPulse.series)
+      // console.dir(sensors, "SENSORS")
 
       /* Send data to view */
-      this.items = rPulse.series
-      this.keys = rPulse.series.columns
+      // this.items = rPulse.series
+      // this.keys = rPulse.series.columns
 
       /* Reproduce in store */
-      this.sensors = sensors
+      // this.sensors = sensors
     }
   }
 }

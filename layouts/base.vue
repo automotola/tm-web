@@ -3,7 +3,7 @@
     header
       navigation(:brandName="brandName")
     main
-      nuxt
+      nuxt(:brandName="brandName")
 </template>
 
 <script>

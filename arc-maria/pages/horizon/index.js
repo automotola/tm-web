@@ -1,7 +1,5 @@
-const R = require('rambda')
-const moment = require('moment')
 
-const legend = {
+export const legend = {
   database: [
     ['db'],
     [
