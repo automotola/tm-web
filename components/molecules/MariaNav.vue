@@ -3,7 +3,7 @@
       .navbar-brand
         a.navbar-item
           figure
-            img(src="/img/logo.png").rotated
+            img(src="~/assets/img/logo.png")
         a.navbar-burger(role="button" aria-label="main navigation" aria-expanded="false")
           span(aria-hidden="true")
           span(aria-hidden="true")

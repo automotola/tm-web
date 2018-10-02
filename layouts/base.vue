@@ -1,16 +1,16 @@
 <template lang="pug">
   #base
     header
-      navigation(:brandName="brandName")
+      maria-nav(:brandName="brandName")
     main
-      nuxt(:brandName="brandName")
+      nuxt
 </template>
 
 <script>
-import navigation from '~/components/molecules/navigation'
+import MariaNav from '~/components/molecules/MariaNav'
 export default {
   components: {
-    navigation
+    MariaNav
   },
   data () {
     return {

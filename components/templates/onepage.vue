@@ -1,47 +1,12 @@
 <template lang="pug">
 .panel
-  section.hero.is-medium.is-fullheight
-    template(v-if="content.hero === true")
-      // Hero head: will stick at the top
-      .hero-head
-      // Hero content: will be in the middle
-      .hero-body
-        .container.has-text-centered
-          h1.title
-            | {{ brandName }}
-          // h2.subtitle
-            | Subtitle
-          figure.image.is-128x128.is-inline-block
-            img(src="~/assets/img/logo.png").spinning
-          // maria-map(:data="data")
-          // maria-table(:data="data")
-      // Hero footer: will stick at the bottom
-      .hero-foot
-        nav.tabs
-          .container
-            // ul
-              li.is-active
-                a Overview
-    template(v-else)
-      .hero-head
-      // Hero content: will be in the middle
-      .hero-body
-        .container.has-text-centered
-          h1.title
-            | {{ brandName }}
-          // h2.subtitle
-            | Subtitle
-          figure.image.is-128x128.is-inline-block
-            img(src="~/assets/img/logo.png").spinning
-          // maria-map(:data="data")
-          // maria-table(:data="data")
-      // Hero footer: will stick at the bottom
-      .hero-foot
-        nav.tabs
-          .container
-            // ul
-              li.is-active
-                a Overview
+  maria-hero(:brandName="brandName" :content="content")
+  maria-map
+  maria-table(v-for="i in data" :data="i" :key="i.index")
+  footer.footer
+    .content.has-text-centered
+      p
+        strong {{ brandName }}
 </template>
 <style>
 .spinning {
@@ -56,6 +21,7 @@
 <script>
 import MariaTable from '~/components/molecules/MariaTable'
 import MariaMap from '~/components/molecules/MariaMap'
+import MariaHero from '~/components/molecules/MariaHero'
 
 export default {
   props: [
@@ -65,7 +31,8 @@ export default {
   ],
   components: {
     MariaTable,
-    MariaMap
+    MariaMap,
+    MariaHero
   }
 }
 </script>

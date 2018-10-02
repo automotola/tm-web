@@ -79,3 +79,6 @@ dist
 
 # IDE
 .idea
+
+# Automotola Backup Components
+.abc
