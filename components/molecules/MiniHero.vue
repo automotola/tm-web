@@ -27,12 +27,11 @@
       .hero-body
         .container.has-text-centered
           h1.title
-            | Mother Earth Network
+            | {{ brandName }}
           // h2.subtitle
             | Subtitle
-          //figure.image.is-128x128.is-inline-block
+          figure.image.is-128x128.is-inline-block
             img(src="~/assets/img/logo.png").spinning
-          graph
           // maria-map(:data="data")
           // maria-table(:data="data")
       // Hero footer: will stick at the bottom
@@ -44,15 +43,11 @@
                 a Overview
 </template>
 <script>
-import Graph from '~/components/organisms/graph'
 export default {
   props: [
     'brandName',
     'content'
-  ],
-  components: {
-    Graph
-  }
+  ]
 }
 </script>
 

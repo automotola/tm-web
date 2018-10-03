@@ -3,7 +3,29 @@
   #map
     #popup
 </template>
+<style>
+      #map {
+        width: 100%;
+        height: 300px;
+        background-color: #000;
+      }
 
+      .map:-moz-full-screen {
+        height: 100%;
+      }
+      .map:-webkit-full-screen {
+        height: 100%;
+      }
+      .map:-ms-fullscreen {
+        height: 100%;
+      }
+      .map:fullscreen {
+        height: 100%;
+      }
+      .ol-rotate {
+        top: 3em;
+      }
+</style>
 <script>
 import $ from 'jquery'
 import 'ol/ol.css';
@@ -25,10 +47,6 @@ import * as layer from 'ol/layer';
 import imageURL from '~/assets/img/map_marker.png';
 import Overlay from 'ol/Overlay';
 import { legend } from '~/assets/js/sensors'
-
-
-
-
 export default {
     data: () => {
       return {

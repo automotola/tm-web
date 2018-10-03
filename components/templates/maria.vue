@@ -1,0 +1,42 @@
+<template lang="pug">
+.panel
+  maria-hero(:brandName="brandName" :content="content")
+  maria-map
+  .uk-panel(v-for="i in data")
+    maria-chart(:datum="i" :key="i.index")
+    maria-table(:data="i" :key="i.index").uk-overflow-auto
+  footer.footer
+    .content.has-text-centered
+      p
+        strong {{ brandName }}
+</template>
+<style>
+.spinning {
+  animation: rotate 30s infinite linear;
+}
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+</style>
+<script>
+import MariaChart from '~/components/molecules/MariaChart'
+import MariaMap from '~/components/molecules/MariaMap'
+import MariaTable from '~/components/molecules/MariaTable'
+import MariaHero from '~/components/molecules/MariaHero'
+
+export default {
+  props: [
+    'brandName',
+    'data',
+    'content'
+  ],
+  components: {
+    MariaChart,
+    MariaMap,
+    MariaTable,
+    MariaHero
+  }
+}
+</script>

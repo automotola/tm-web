@@ -1,12 +1,6 @@
 <template lang="pug">
 .panel
   maria-hero(:brandName="brandName" :content="content")
-  maria-map
-  maria-table(v-for="i in data" :data="i" :key="i.index")
-  footer.footer
-    .content.has-text-centered
-      p
-        strong {{ brandName }}
 </template>
 <style>
 .spinning {
@@ -19,8 +13,6 @@
 }
 </style>
 <script>
-import MariaTable from '~/components/molecules/MariaTable'
-import MariaMap from '~/components/molecules/MariaMap'
 import MariaHero from '~/components/molecules/MariaHero'
 
 export default {
@@ -30,9 +22,7 @@ export default {
     'content'
   ],
   components: {
-    MariaTable,
-    MariaMap,
-    MariaHero
+    MariaHero,
   }
 }
 </script>
