@@ -1,6 +1,7 @@
 <template lang="pug">
 .panel
-  mini-hero(:brandName="brandName" :content="content")
+  mini-pad(:medium="medium" :symbols="signs4" :user="user" :users="users")
+  // mini-bar(:medium="medium" :options="signs4")
 </template>
 <style>
 .spinning {
@@ -13,16 +14,138 @@
 }
 </style>
 <script>
-import MiniHero from '~/components/molecules/MiniHero'
+import { mapMutations } from 'vuex'
+
+import MiniBar from '~/components/molecules/MiniBar'
+import MiniPad from '~/components/molecules/MiniPad'
 
 export default {
+  head: {
+    title: 'Machine Insight Network Interpreter',
+    link: [
+      { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css' }
+    ],
+  },
   props: [
-    'brandName',
-    'data',
-    'content'
+    'content',
+    'medium'
   ],
   components: {
-    MiniHero
-  }
+    MiniPad,
+    MiniBar
+  },
+  computed: {
+    peers () { return this.$store.state.peers.list }
+  },
+  data() {
+    return {
+      user: null,
+      users: [],
+      signs4: [
+        'add-circle-outline',
+        'analytics',
+        'aperture',
+        'apps',
+        'barcode',
+        'basket',
+        'cafe',
+        'contact'
+      ],
+      signs20: [
+        'add-circle-outline',
+        'analytics',
+        'aperture',
+        'apps',
+        'barcode',
+        'basket',
+        'cafe',
+        'contact',
+        'desktop',
+        'fitness',
+        'football',
+        'globe',
+        'moon',
+        'rainy',
+        'water',
+        'trash',
+        'thumbs-up',
+        'thumbs-down',
+        'sunny',
+        'gift'
+      ]
+    }
+  },
+  mounted: function() {
+    this.$nextTick(function () {
+
+      // Declarations
+      var mark = {
+        name: "Mark",
+        pass: "mark@gunDB.io",
+      }
+
+      var melissa = {
+        name: "Melissa",
+        pass: "melissa@gunDB.io",
+      }
+
+      var mini = {
+        name: "Mini",
+        pass: "mini@gunDB.io",
+      }
+
+      // Additions
+      mini.father = mark
+      mini.mother = melissa
+      mark.spouse = melissa
+      melissa.spouse = mark
+      mark.daughter = mini
+      melissa.daughter = mini
+
+      // References
+      const MiniRef = this.$gun.get('mini')
+      const MelissaRef = this.$gun.get('melissa')
+      const MarkRef = this.$gun.get('mark')
+      const FamilyRef = this.$gun.get('family')
+
+      // partial updates merge with existing data!
+      MiniRef.put(mini);
+      MarkRef.put(mark);
+      MelissaRef.put(melissa);
+      
+      // access the data as if it is a document.
+      MiniRef.get('father').get('name').once(function(data, key){
+      // `val` grabs the data once, no subscriptions.
+        console.log("Mini's father is", data);
+      });
+      // traverse a graph of circular references!
+      MarkRef.get('daughter').get('father').once(function(data, key){
+        console.log("Mark is the father of his daughter!", data);
+      });
+      FamilyRef.on((data, key) => {
+        console.log("family was called!")
+      })
+
+      // add both of them to a table!
+      FamilyRef.set(MelissaRef);
+      FamilyRef.set(MelissaRef.get('spouse'));
+      FamilyRef.set(MelissaRef.get('daughter'));
+      FamilyRef.once(function(data, key){
+        console.log("This is Melissa's family!", data);
+      });
+
+      let family = []
+      // grab each item once from the table, continuously:
+      FamilyRef.map().once(function(data, key){
+        let contact = {}
+        contact.name = data.name
+        contact.pass = data.pass
+        // family.push(contact);
+      });
+
+      console.log("Family", family)
+      this.users = family
+    });
+  },
 }
 </script>

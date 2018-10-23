@@ -1,5 +1,5 @@
 export const state = () => ({
-  tick: {
+  me: {
     message: 'started',
     timeStamp: Date.now()
   }

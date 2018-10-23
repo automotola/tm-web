@@ -40,7 +40,10 @@ module.exports = {
 */
   plugins: [
     // '~/plugins/vue-editable',
-    '~/plugins/vue-axios'
+    '~/plugins/vueAxios',
+    '~/plugins/vueGun',
+    '~/plugins/vueEditable',
+    '~/plugins/vueMarkdown'
   ],
 
   /*
@@ -84,12 +87,13 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
+        }),
+        config.module.rules.push({
+          test: /\.(md|txt)$/,
+          use: 'raw-loader'
         })
       }
-      config.module.rules.push({
-        test: /\.txt$/,
-        use: 'raw-loader'
-      })
+      
     }
   }
 }

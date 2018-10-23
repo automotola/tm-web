@@ -1,12 +1,31 @@
 <template lang="pug">
 .panel
-  marcus(:content="content")
+  ul.uk-subnav.uk-subnav-pill(uk-switcher='')
+    li
+      a(href='#') Mini + Signs
+    li
+      a(href='#') Documentation
+  ul.uk-switcher.uk-margin
+    li Use Case
+      mini(:content="content" :medium="'mini'")
+    li Documentation
+      vue-markdown {{ article }}
 </template>
 <script>
-import marcus from '~/components/templates/marcus'
+import mini from '~/components/templates/mini'
+import VueMarkdown from 'vue-markdown'
+import miniDocs from '~/static/md/ai/mini.md';
+
 export default {
+  layout: 'abrie',
   components: {
-    marcus
+    mini,
+    VueMarkdown
+  },
+  computed: {
+    article() {
+      return miniDocs
+    }
   },
   data () {
     return {
@@ -17,15 +36,11 @@ export default {
         location: true,
       },
       content: {
-        hero: true
+        hero: true,
+        logo: false,
+        article: `i am a ~~tast~~ **test**.`
       }
     }
-  },
-  /*
-  ** Headers of the page
-  */
-  head: {
-    title: 'Mother Earth Network'
-  },
+  }
 }
 </script>
