@@ -15,16 +15,15 @@
             .uk-margin
               .uk-card.uk-placeholder.uk-padding-remove.rounded-lg
                 .uk-body 
-                  // pre {{ users }}
-                  table.uk-table.uk-table-divider.uk-table-hover.uk-margin-remove
-                    thead
-                      tr
-                        th Username
-                        th Passphrase
-                    tbody
-                      tr(v-for="user in users").rounded-lg
-                        td {{ user.name }}
-                        td {{ user.pass }}
+                  pre {{ users }}
+                  .uk-overflow-auto
+                    table.uk-table.uk-table-divider.uk-table-hover.uk-margin-remove.uk-table-responsive
+                      thead
+                        tr
+                          th User Name
+                      tbody
+                        tr(v-for="user in users").rounded-lg
+                          td {{ name }}
             // .uk-card.uk-card-secondary.rounded-lg
               .uk-panel.uk-text-center
                 template(v-for="symbol in state.symbology")

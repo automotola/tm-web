@@ -38,8 +38,8 @@ export default {
       let me = {
         name: this.name,
       }
-      const FamilyRef = this.$gun.get('family')
-      const MyRef = this.$gun.get('me')
+      const FamilyRef = this.$gun.get('mini/family')
+      const MyRef = this.$gun.get('mini/me')
       MyRef.put(me);
       FamilyRef.set(MyRef);
       // live update the table!

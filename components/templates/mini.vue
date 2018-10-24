@@ -35,12 +35,21 @@ export default {
     MiniBar
   },
   computed: {
-    peers () { return this.$store.state.peers.list }
+    users: function() {
+      const FamilyRef = this.$gun.get('family')
+      let list = []
+      FamilyRef.map().once(function(data, key){
+        let contact = {}
+        contact.name = data.name
+        list.push(contact);
+      });
+      console.log("FAM:", list) 
+      return list
+    }
   },
   data() {
     return {
       user: null,
-      users: [],
       signs4: [
         'add-circle-outline',
         'analytics',
@@ -74,7 +83,7 @@ export default {
   mounted: function() {
     this.$nextTick(function () {
 
-      // Declarations
+      // 
       var mark = {
         name: "Mark",
         pass: "mark@gunDB.io",
