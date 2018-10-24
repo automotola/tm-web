@@ -50,18 +50,30 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
   ],
+
   /*
-  ** Axios module configuration
+  ** Module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     proxyHeaders: false,
     credentials: false
+  },
+  markdownit: {
+    // See https://github.com/markdown-it/markdown-it
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      // ['markdown-it-container', containerName],
+      'markdown-it-attrs'
+    ]
   },
 
 
@@ -89,11 +101,10 @@ module.exports = {
           exclude: /(node_modules)/
         }),
         config.module.rules.push({
-          test: /\.(md|txt)$/,
+          test: /\.txt$/,
           use: 'raw-loader'
         })
       }
-      
     }
   }
 }

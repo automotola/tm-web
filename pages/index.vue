@@ -1,34 +1,29 @@
 <template lang="pug">
 .panel
-  ul.uk-subnav.uk-subnav-pill(uk-switcher='')
-    li
-      a(href='#') Mini + Signs
-    li
-      a(href='#') Documentation
-  ul.uk-switcher.uk-margin
-    li Use Case
-      mini(:content="content" :medium="'mini'")
-    li Documentation
-      vue-markdown {{ article }}
+  SignsHero(:content="content")
 </template>
 <script>
-import mini from '~/components/templates/mini'
-import VueMarkdown from 'vue-markdown'
-import miniDocs from '~/static/md/ai/mini.md';
+import SignsHero from '~/components/molecules/SignsHero'
 
 export default {
   layout: 'abrie',
   components: {
-    mini,
-    VueMarkdown
+    SignsHero,
   },
-  computed: {
-    article() {
-      return miniDocs
+  created() {
+    this.getItems()
+  },
+  methods: {
+    async getItems() {
+      const request = `https://raw.githubusercontent.com/athensinitiative/research/master/mini.md`
+      const response = await this.$axios.$get(request)
+      console.log(response)
+      this.article = response
     }
   },
   data () {
     return {
+      article: '',
       options: {
         graph: true,
         scene: true,
@@ -37,8 +32,7 @@ export default {
       },
       content: {
         hero: true,
-        logo: false,
-        article: `i am a ~~tast~~ **test**.`
+        logo: true
       }
     }
   }

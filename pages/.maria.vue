@@ -53,7 +53,7 @@ export default {
       const response = await this.$axios.$get(request)
       // console.log('Response', response.results[0])
       const results = response.results[0]
-      console.log
+  
 
       // const rPulseSeries = R.pluck('series')(rPulse)
 

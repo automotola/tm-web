@@ -45,11 +45,7 @@ export default {
         'add-circle-outline',
         'analytics',
         'aperture',
-        'apps',
-        'barcode',
-        'basket',
-        'cafe',
-        'contact'
+        'apps'
       ],
       signs20: [
         'add-circle-outline',

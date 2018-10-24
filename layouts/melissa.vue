@@ -1,4 +1,4 @@
 <template lang="pug">
-  .uk-background-secondary(uk-height-viewport).uk-flex.uk-flex-center.uk-flex-middle
+  .uk-background-primary(uk-height-viewport)
     nuxt
 </template>
