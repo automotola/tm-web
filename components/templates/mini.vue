@@ -1,7 +1,6 @@
 <template lang="pug">
 .panel
   mini-pad(:symbols="signs4" :user="user" :users="signs4")
-  // mini-bar( :options="signs4")
 </template>
 <style>
 .spinning {
