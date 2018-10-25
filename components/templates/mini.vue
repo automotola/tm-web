@@ -1,7 +1,7 @@
 <template lang="pug">
 .panel
-  mini-pad(:medium="medium" :symbols="signs4" :user="user" :users="users")
-  // mini-bar(:medium="medium" :options="signs4")
+  mini-pad(:symbols="signs4" :user="user" :users="signs4")
+  // mini-bar( :options="signs4")
 </template>
 <style>
 .spinning {
@@ -28,24 +28,10 @@ export default {
   },
   props: [
     'content',
-    'medium'
   ],
   components: {
     MiniPad,
     MiniBar
-  },
-  computed: {
-    users: function() {
-      const FamilyRef = this.$gun.get('family')
-      let list = []
-      FamilyRef.map().once(function(data, key){
-        let contact = {}
-        contact.name = data.name
-        list.push(contact);
-      });
-      console.log("FAM:", list) 
-      return list
-    }
   },
   data() {
     return {
@@ -80,76 +66,58 @@ export default {
       ]
     }
   },
+  computed: {
+    /* users: function() {
+      const FamilyRef = this.$gun.get('mini/family')
+      let list = []
+      FamilyRef.map().once(function(data, key){
+        let contact = {}
+        contact.name = data.name
+        console.log(data, contact)
+        list.push(contact);
+      });
+      console.log("List computed:", list, new Date()) 
+      return list
+    } */
+  },
   mounted: function() {
     this.$nextTick(function () {
 
-      // 
-      var mark = {
-        name: "Mark",
-        pass: "mark@gunDB.io",
-      }
-
-      var melissa = {
-        name: "Melissa",
-        pass: "melissa@gunDB.io",
-      }
-
-      var mini = {
-        name: "Mini",
-        pass: "mini@gunDB.io",
-      }
-
-      // Additions
-      mini.father = mark
-      mini.mother = melissa
-      mark.spouse = melissa
-      melissa.spouse = mark
-      mark.daughter = mini
-      melissa.daughter = mini
-
       // References
-      const MiniRef = this.$gun.get('mini')
-      const MelissaRef = this.$gun.get('melissa')
-      const MarkRef = this.$gun.get('mark')
-      const FamilyRef = this.$gun.get('family')
 
       // partial updates merge with existing data!
-      MiniRef.put(mini);
-      MarkRef.put(mark);
-      MelissaRef.put(melissa);
-      
-      // access the data as if it is a document.
-      MiniRef.get('father').get('name').once(function(data, key){
+      // const MiniRef = this.$gun.get('mini')
+      // MiniRef.put(mini);
+
+      // access the data as if it is a document OR
+      // traverse a graph of circular references
+
+      /* FamilyRef.get('father').get('name').once(function(data, key){
       // `val` grabs the data once, no subscriptions.
         console.log("Mini's father is", data);
-      });
-      // traverse a graph of circular references!
-      MarkRef.get('daughter').get('father').once(function(data, key){
-        console.log("Mark is the father of his daughter!", data);
-      });
+      }); */
+      
+      let family = []
+      const FamilyRef = this.$gun.get('mini/family')
       FamilyRef.on((data, key) => {
-        console.log("family was called!")
+        console.log(key, "was called.")
       })
 
-      // add both of them to a table!
-      FamilyRef.set(MelissaRef);
-      FamilyRef.set(MelissaRef.get('spouse'));
-      FamilyRef.set(MelissaRef.get('daughter'));
-      FamilyRef.once(function(data, key){
-        console.log("This is Melissa's family!", data);
-      });
-
-      let family = []
+      // FamilyRef.set(MelissaRef);
+      // FamilyRef.set(MelissaRef.get('spouse'));
+      // FamilyRef.set(MelissaRef.get('daughter'));
+      
       // grab each item once from the table, continuously:
       FamilyRef.map().once(function(data, key){
         let contact = {}
         contact.name = data.name
-        contact.pass = data.pass
-        // family.push(contact);
-      });
+        family.push(contact);
+        console.log("This is in my family!", contact);
+      })
 
-      console.log("Family", family)
+      console.log("Family List:", family)
       this.users = family
+
     });
   },
 }

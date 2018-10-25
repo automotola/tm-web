@@ -5,14 +5,10 @@
       .uk-padding-small
         ul.uk-subnav(uk-tab="connect: #screen")
           li
-            a(href='#') Mini + Signs
-          li
-            a(href='#') Documentation
+            a(href='#') Account
       ul.uk-switcher.uk-margin#screen
         li
-          mini(:content="content" :medium="'mini'")
-        li
-          mini(:content="content" :medium="'mini'")
+          mini(:content="content")
     .uk-panel.uk-background-muted.uk-padding#screen
       article(v-html="$md.render(article)" uk-overflow-auto)
 </template>
@@ -39,6 +35,7 @@ export default {
       const request = `https://raw.githubusercontent.com/athensinitiative/research/master/mini.md`
       const response = await this.$axios.$get(request)
       this.article = response
+      console.dir("ARTICLE LOADED")
     }
   },
   data () {
