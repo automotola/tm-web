@@ -28,7 +28,14 @@
               .uk-card
                 .uk-panel.uk-inline.uk-width-1-1
                     .uk-width-1-1
-                      button.uk-form-icon(uk-icon='world').uk-margin-small-left
+                      template(v-if="input.type === 'global'")
+                        button.uk-form-icon(uk-icon='world').uk-margin-small-left
+                      template(v-else-if="input.type === 'social'")
+                        button.uk-form-icon(uk-icon='social').uk-margin-small-left
+                      template(v-else-if="input.type === 'personal'")
+                        button.uk-form-icon(uk-icon='users').uk-margin-small-left
+                      template(v-else)
+                        button.uk-form-icon(uk-icon='user').uk-margin-small-left
                       div(uk-drop='pos: top-justify; boundary: .uk-width-1-1; boundary-align: true; mode: click')
                         .uk-card.uk-card-small.uk-card-body.uk-card-default.rounded
                           .uk-form-label
