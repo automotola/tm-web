@@ -1,7 +1,3 @@
-# maria
-
-> a socioecology data visualisation and analytics platform
-
 ## Build Setup
 
 ``` bash
