@@ -1,7 +1,7 @@
 {
-  "name": "maria",
+  "name": "tm-mini",
   "version": "1.0.0",
-  "description": "a socioecology data visualisation and analytics platform",
+  "description": "",
   "author": "Omotola Bolarin",
   "private": true,
   "scripts": {
