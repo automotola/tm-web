@@ -1,14 +1,14 @@
 <template lang="pug">
 .uk-panel
   .uk-grid-collapse(class='uk-child-width-expand@s', uk-grid='', uk-height-viewport)
-    .uk-panel.uk-background-primary.uk-light.uk-flex.uk-flex-center
-      // .uk-padding-small
+    .uk-panel.uk-background-primary.uk-light
+      .uk-padding-small
         ul.uk-subnav(uk-tab="connect: #screen")
           li
             a(href='#') Account
-      // ul.uk-switcher#screen
+      ul.uk-switcher.uk-margin#screen
         li
-      mini(:content="content").uk-width-large
+          mini(:content="content").uk-width-large
 </template>
 <style>
 #screen {

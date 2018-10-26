@@ -2,13 +2,13 @@
 .uk-panel
   .uk-grid-collapse(class='uk-child-width-expand@s', uk-grid='', uk-height-viewport)
     .uk-panel.uk-background-primary.uk-light
-      //.uk-padding-small
+      .uk-padding-small
         ul.uk-subnav(uk-tab="connect: #screen")
           li
             a(href='#') Account
-      // ul.uk-switcher.uk-margin#screen
+      ul.uk-switcher.uk-margin#screen
         li
-      mini(:content="content")
+          mini(:content="content")
     .uk-panel.uk-background-muted.uk-padding#screen
       article(v-html="$md.render(article)" uk-overflow-auto)
 </template>
