@@ -78,18 +78,13 @@
 import { mapMutations } from 'vuex'
 import UkForm from '~/components/uikit/form'
 import VanillaForm from '~/components/vanilla/form'
-import Vue from 'vue'
-import BotUI from 'botui/build/botui.js'
-import 'botui/build/botui.min.css'
-import 'botui/build/botui-theme-default.css'
-
+import initMiniBot from '~/assets/js/bot-mini'
 const r = require('rambda')
 
 export default {
   props: [
     'medium',
     'symbols',
-    'user',
     'users'
   ],
   components: {
@@ -145,37 +140,30 @@ export default {
     origin() { return this.$store.state.account }
   },
   methods: {
-    initBot() {
-      let botui = BotUI('mini-bot', { vue: Vue })
-      botui.message.add({ content: 'Hello World from bot!' })
-      .then(function () {
-        botui.message.add({
-          delay: 1000,
-          human: true,
-          content: 'Hello World from human!'
-        })
-      })
-    },
     handleSubmit() {
       // Send data to the server or update your stores and such.
-      console.log("ACCOUNT FORM SUBMITTED", this.input.message)
+      let signal = {}
+      signal.from = this.user
+      signal.time = new Date()
+      signal.message = this.input.message
+      signal.type = this.input.type
+
+      console.log("NEW SIGNAL", signal)
+
       // this.$store.commit('user/set', this.account)
-      let signs = []
       const Signs = this.$gun.get('mini/signs')
       Signs.map().once(function(data, key){
         let sign = {}
         sign.text = data.name
         signs.push(sign);
       })
-
-      this.events = signs
-      console.log(signs)
     }
   },
   mounted: function() {
     this.$nextTick(function () {
       console.log("MINI PAD LOADED")
-      this.initBot()
+      console.log("MINI BOT LOADED")
+      initMiniBot()
     });
   },
 }

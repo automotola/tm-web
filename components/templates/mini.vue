@@ -1,6 +1,6 @@
 <template lang="pug">
 .panel
-  mini-pad(:symbols="signs4" :user="user" :users="signs4")
+  mini-pad(:symbols="signs4" :users="signs4")
 </template>
 <style>
 .spinning {
@@ -34,7 +34,6 @@ export default {
   },
   data() {
     return {
-      user: null,
       signs4: [
         'add-circle-outline',
         'analytics',

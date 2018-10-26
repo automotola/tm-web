@@ -104,9 +104,9 @@ module.exports = {
         config.module.rules.push({
           test: /\.txt$/,
           use: 'raw-loader'
-        }),
+        })
         config.resolve.alias['vue'] = 'vue/dist/vue.min.js'
       }
     }
-  }
+  },
 }
