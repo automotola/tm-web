@@ -1,6 +1,6 @@
 <template lang="pug">
 .panel
-  mini-pad(:symbols="signs4" :users="signs4")
+  mini-pad(:story="stories[0]" :users="users")
 </template>
 <style>
 .spinning {
@@ -14,8 +14,6 @@
 </style>
 <script>
 import { mapMutations } from 'vuex'
-
-import MiniBar from '~/components/molecules/MiniBar'
 import MiniPad from '~/components/molecules/MiniPad'
 
 export default {
@@ -25,12 +23,8 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css' }
     ],
   },
-  props: [
-    'content',
-  ],
   components: {
-    MiniPad,
-    MiniBar
+    MiniPad
   },
   data() {
     return {
@@ -61,6 +55,57 @@ export default {
         'thumbs-down',
         'sunny',
         'gift'
+      ],
+      stories: [
+        {
+          title: 'Messaging',
+          description: 'Write a message!',
+          actions: [
+            {
+              label: "Create a username",
+              symbol: "user",
+              input: "",
+              control: {
+                message: [
+                  { 
+                    name: 'global',
+                    checked: 'checked'
+                  },
+                  { 
+                    name: 'social',
+                    checked: 'unchecked'
+                  },
+                  { 
+                    name: 'personal',
+                    checked: 'unchecked'
+                  },
+                  { 
+                   name: 'private',
+                    checked: 'unchecked'
+                  }
+                ],
+              }
+            },
+            {
+              label: "Write your message",
+              symbol: "comment",
+              input: ""
+            }
+          ],
+          events: []
+        },
+        {
+          title: 'Privacy',
+          description: 'Select your level of privacy.',
+          calls: [
+            {
+              call: "Write your message",
+              type: "action",
+              
+            }
+          ],
+          events: []
+        }
       ]
     }
   },
@@ -77,6 +122,19 @@ export default {
       console.log("List computed:", list, new Date()) 
       return list
     } */
+  },
+  computed: {
+    users: function() {
+      const Mini = this.$gun.get('mini/athens')
+      let members = []
+      Mini.map().once(function(data, key){
+        let user = {}
+        user.name = data.name
+        members.push(user);
+      })
+      console.log(members)
+      return members
+    }
   },
   mounted: function() {
     this.$nextTick(function () {

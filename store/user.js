@@ -1,19 +1,22 @@
 export const state = () => ({
   account: {
-    name: undefined,
+    username: "Unknown User",
   }
 })
 
-export const actions = {
+/* export const actions = {
   updateActiveAccount(context, selectedAccount) {
     console.log('ACTION: Registering User , ' + selectedAccount.name)
     context.commit('updateAccount', selectedAccount);
   }
 }
-
+ */
 export const mutations = {
-  set(state, account) {
-    console.log('MUTATION: Registering User Account, ' + account.name)
+  set(state, username) {
+    console.log('MUTATION: Registering User Account, ' + username)
+    let account = {
+      username: username
+    }
     state.account = account
   }
 }

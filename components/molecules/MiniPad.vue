@@ -4,36 +4,36 @@
       .hero-head
         .uk-container.uk-padding-top
             article.uk-section.uk-text-center.uk-article.uk-height-small
-              h3.uk-article-meta {{ story[0].title }}
-              p.uk-text-lead {{ story[0].description }}
+              h3.uk-article-meta {{ story.title }}
+              p.uk-text-lead {{ story.description }}
       .hero-body.uk-padding-remove-top
-          .uk-container
             .uk-margin
+              .uk-margin-small(v-for="call in story.actions")
                   .uk-panel.uk-inline.uk-width-1-1
-                    #one.uk-width-1-1
+                    // #one.uk-width-1-1
                       template(v-if="input.type === 'global'")
-                        button.uk-form-icon(uk-icon='world').uk-margin-small-left
+                        button.uk-form-icon.uk-form-icon-flip(uk-icon='world').uk-margin-small-right
                       template(v-else-if="input.type === 'social'")
-                        button.uk-form-icon(uk-icon='social').uk-margin-small-left
+                        button.uk-form-icon.uk-form-icon-flip(uk-icon='social').uk-margin-small-right
                       template(v-else-if="input.type === 'personal'")
-                        button.uk-form-icon(uk-icon='users').uk-margin-small-left
+                        button.uk-form-icon.uk-form-icon-flip(uk-icon='users').uk-margin-small-right
                       template(v-else)
-                        button.uk-form-icon(uk-icon='user').uk-margin-small-left
+                        button.uk-form-icon.uk-form-icon-flip(uk-icon='user').uk-margin-small-right
                       div(uk-drop='pos: top-justify; boundary: #one; boundary-align: true; mode: click; offset: 0')
                         .uk-card.uk-card-small.uk-card-body.uk-card-default.rounded.uk-height-small.uk-flex.uk-flex-middle
                           .uk-form-label
                           .uk-form-controls 
-                            label(v-for="option in control.message")
+                            label(v-for="option in story.control.message")
                               input.uk-radio(type='radio', :name='"radio-" + option.name' :value="option.name" v-model="input.type" :checked="option.checked")
                               |  {{ option.name }}
                               br
-                    button.uk-form-icon.uk-form-icon-flip.uk-margin-small-top.uk-margin-small-right.uk-icon-button(href='', uk-icon='check')
-                    input.uk-form-large.uk-input.shadow.rounded(:placeholder="story[0].plot[0].call" type="text" v-model='input.message' @keyup.enter="handleSubmit")
+                    span.uk-form-icon.uk-margin-small-left(:uk-icon='call.symbol')
+                    input.uk-form-large.uk-input.shadow.rounded(:placeholder="call.label" type="text" v-model='call.input' @keyup.enter="handleSubmit")
             .uk-margin
               .uk-card.uk-card-body.uk-padding-remove
                 .uk-panel
                   ul.uk-subnav.uk-subnav-pills(uk-tab="connect: #display")
-                    li
+                    // li
                       a(href='#Message') Data
                     li
                       a(href='#Messages')
@@ -44,19 +44,27 @@
                         template(v-else)
                           span {{ events.length + ' Messages'}}
                     li
-                      a(href='#Members') Members
+                      a(href='#Members')
+                        template(v-if="users.length === 0") 
+                          span {{ 'Member' }}
+                        template(v-else-if="users.length === 1")
+                          span {{ users.length + ' Member'}}
+                        template(v-else)
+                          span {{ users.length + ' Members'}}
                   ul.uk-switcher.uk-margin#display
+                    // li
+                        pre.uk-height-small {{ events }}
                     li
-                        pre.uk-height-small {{ input }}
-                    li
-                        .uk-overflow-auto.uk-height-small
+                        .uk-overflow-auto.uk-height-medium
                           table.uk-table.uk-tsable-small.uk-table-divider.uk-table-hover.uk-margin-remove
                             thead
                               tr
+                                th From
                                 th Message
-                                th Moment
+                                th Time
                             tbody
                               tr(v-for="e in events").rounded
+                                td {{ e.from }}
                                 td {{ e.message }}
                                 td {{ e.time }}
                     li
@@ -65,30 +73,14 @@
                             thead
                               tr
                                 th Username
-                                th Description
                             tbody
-                              tr(v-for="u in users").rounded
-                                td {{ u.username }}
-                                td {{ u.description }}
-            
-            .uk-margin
-              
-            // .uk-caruk-card-secondary.rounded
-              .uk-panel.uk-text-center
-                template(v-for="symbol in state.symbology")
-                  a.uk-button {{ symbol }}
-            // .uk-margin
-              .uk-card
-                .uk-grid-collapse(class='uk-child-width-1-4', uk-grid='')
-                  template(v-for="symbol in symbols")
-                    a.uk-margin-remove
-                      .uk-tile.uk-padding-small.uk-text-center
-                        i(:class="'icon' + ' ' + 'ion-ios-' + symbol")
+                              tr(v-for="user in users").rounded
+                                td {{ user.name }}
       .hero-foot
 </template>
 <style scoped>
 .uk-form-large:not(textarea):not([multiple]):not([size]) {
-  padding-right: 50px!important;
+  padding-right: 45px!important;
 }
 .uk-form-large:not(textarea):not([multiple]):not([size]) {
   padding-left: 45px!important;
@@ -98,6 +90,12 @@
 }
 .uk-margin-small-left {
   margin-left: 5px!important;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 </style>
 
@@ -109,15 +107,15 @@ import initMiniBot from '~/assets/js/bot-mini'
 const r = require('rambda')
 
 export default {
-  props: [
-    'medium',
-    'symbols',
-  ],
   components: {
     UkForm,
     VanillaForm,
     // BotUI
   },
+  props: [
+    'story',
+    'users'
+  ],
   data() {
     return {
       input: {
@@ -126,78 +124,38 @@ export default {
       },
       events: [
 
-      ],
-      story: [
-        {
-          title: 'Messaging',
-          description: 'Write a message!',
-          plot: [
-            {
-              call: "Write your message",
-              type: "action"
-            }
-          ],
-          events: []
-        },
-        {
-          title: 'Privacy',
-          description: 'Select your level of privacy.',
-          plot: [
-            {
-              call: "Write your message",
-              type: "action"
-            }
-          ],
-          events: []
-        }
-      ],
-      control: {
-        message: [
-          { 
-            name: 'global',
-            checked: 'checked'
-          },
-          { 
-            name: 'social',
-            checked: 'unchecked'
-          },
-          { 
-            name: 'personal',
-            checked: 'unchecked'
-          },
-          { 
-            name: 'private',
-            checked: 'unchecked'
-          }
-        ],
-      }
+      ]
     }
-  },
-  computed: {
-    origin() { return this.$store.state.account }
   },
   methods: {
     handleSubmit() {
       // Send data to the server or update your stores and such.
       let signal = {}
-      signal.from = this.user
+
+      
+      signal.from = this.story.actions[0].input
+      signal.message = this.story.actions[1].input
       signal.time = new Date()
-      signal.message = this.input.message
-      signal.type = this.input.type
+      // signal.type = this.input.type
 
       console.log("NEW SIGNAL", signal)
       const story = this.events
       console.log("OLD STORY", story)
       story.push(signal)
       console.log("NEW STORY",story)
+      this.events = story
 
-      // this.$store.commit('user/set', this.account)
+      let username = {
+        name: this.story.actions[0].input
+      }
+
+      this.$store.commit('user/set', username)
       const Signs = this.$gun.get('mini/signs')
-      Signs.map().once(function(data, key){
-        let sign = {}
-        sign.text = data.name
-        signs.push(sign);
-      })
+      const Mini = this.$gun.get('mini/athens')
+      Signs.put(username)
+      Mini.set(Signs)
+
+
     }
   },
   mounted: function() {
