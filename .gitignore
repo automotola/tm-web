@@ -82,6 +82,7 @@ typings/
 
 # Automotola Backup Components
 .abc
+.dist 
 
 ##
 .DS_Store

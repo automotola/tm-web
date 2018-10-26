@@ -43,7 +43,8 @@ module.exports = {
     '~/plugins/vueAxios',
     '~/plugins/vueGun',
     '~/plugins/vueEditable',
-    '~/plugins/vueMarkdown'
+    '~/plugins/vueMarkdown',
+    // '~/plugins/vueBot'
   ],
 
   /*
@@ -103,7 +104,8 @@ module.exports = {
         config.module.rules.push({
           test: /\.txt$/,
           use: 'raw-loader'
-        })
+        }),
+        config.resolve.alias['vue'] = 'vue/dist/vue.min.js'
       }
     }
   }

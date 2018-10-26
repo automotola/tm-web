@@ -96,26 +96,22 @@ export default {
         console.log("Mini's father is", data);
       }); */
       
-      let family = []
-      const FamilyRef = this.$gun.get('mini/family')
-      FamilyRef.on((data, key) => {
-        console.log(key, "was called.")
-      })
+      /* let signs = []
+      const AthensRef = this.$gun.get('athens/signs') */
 
       // FamilyRef.set(MelissaRef);
       // FamilyRef.set(MelissaRef.get('spouse'));
       // FamilyRef.set(MelissaRef.get('daughter'));
       
       // grab each item once from the table, continuously:
-      FamilyRef.map().once(function(data, key){
-        let contact = {}
-        contact.name = data.name
-        family.push(contact);
-        console.log("This is in my family!", contact);
-      })
+      /* AthensRef.map().once(function(data, key){
+        let sign = {}
+        sign.text = data.name
+        signs.push(sign);
+      }) */
 
-      console.log("Family List:", family)
-      this.users = family
+      // this.users = signs
+      console.log("MINI TEMP LOADED")
 
     });
   },

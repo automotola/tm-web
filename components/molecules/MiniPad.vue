@@ -9,9 +9,13 @@
       .hero-body.uk-padding-remove
           .uk-container
             .uk-margin
-              .uk-caruk-placeholder.uk-padding-remove.rounded
-                .uk-body 
-                  pre {{ input }}
+              .uk-card.rounded
+                  .uk-body.uk-padding-small
+                    #mini-bot
+                      bot-ui
+                    pre {{ input }}
+                    .uk-margin-small(v-for="e in events")
+                      pre {{ e }}
                   // .uk-overflow-auto
                     table.uk-table.uk-table-divider.uk-table-hover.uk-margin-remove.uk-table-responsive
                       thead
@@ -27,26 +31,25 @@
             .uk-margin
               .uk-card
                 .uk-panel.uk-inline.uk-width-1-1
-                    .uk-width-1-1
-                      template(v-if="input.type === 'global'")
-                        button.uk-form-icon(uk-icon='world').uk-margin-small-left
-                      template(v-else-if="input.type === 'social'")
-                        button.uk-form-icon(uk-icon='social').uk-margin-small-left
-                      template(v-else-if="input.type === 'personal'")
-                        button.uk-form-icon(uk-icon='users').uk-margin-small-left
-                      template(v-else)
-                        button.uk-form-icon(uk-icon='user').uk-margin-small-left
-                      div(uk-drop='pos: top-justify; boundary: .uk-width-1-1; boundary-align: true; mode: click')
-                        .uk-card.uk-card-small.uk-card-body.uk-card-default.rounded
+                  template(v-if="input.type === 'global'")
+                    button.uk-form-icon(uk-icon='world').uk-margin-small-left
+                  template(v-else-if="input.type === 'social'")
+                    button.uk-form-icon(uk-icon='social').uk-margin-small-left
+                  template(v-else-if="input.type === 'personal'")
+                    button.uk-form-icon(uk-icon='users').uk-margin-small-left
+                  template(v-else)
+                    button.uk-form-icon(uk-icon='user').uk-margin-small-left
+                  #two.uk-width-1-1
+                    button.uk-form-icon.uk-form-icon-flip.uk-margin-small-top.uk-margin-small-right.uk-icon-button(href='', uk-icon='check')
+                    div(uk-drop='pos: top-justify; boundary: #two; boundary-align: true; mode: click')
+                      .uk-card.uk-card-small.uk-card-body.uk-card-default.rounded.uk-height-medium.uk-flex.uk-flex-middle
                           .uk-form-label
                           .uk-form-controls 
                             label(v-for="option in control.message")
                               input.uk-radio(type='radio', :name='"radio-" + option.name' :value="option.name" v-model="input.type" :checked="option.checked")
                               |  {{ option.name }}
                               br
-                    span.uk-form-icon.uk-form-icon-flip.uk-margin-small-right
-                      a.uk-icon-button(href='', uk-icon='check')
-                    input.uk-form-large.uk-input.shadow.rounded(:placeholder="story[0].plot[0].call" type="text" v-model='input.message' @keyup.enter="handleSubmit")
+                  input.uk-form-large.uk-input.shadow.rounded(:placeholder="story[0].plot[0].call" type="text" v-model='input.message' @keyup.enter="handleSubmit")
             .uk-margin
               .uk-card
                 .uk-grid-collapse(class='uk-child-width-1-4', uk-grid='')
@@ -57,10 +60,10 @@
       .hero-foot
 </template>
 <style scoped>
-.uk-form-icon-flip~.uk-input {
+.uk-form-large:not(textarea):not([multiple]):not([size]) {
   padding-right: 50px!important;
 }
-.uk-form-icon-flip~.uk-input {
+.uk-form-large:not(textarea):not([multiple]):not([size]) {
   padding-left: 45px!important;
 }
 .uk-margin-small-right {
@@ -75,6 +78,13 @@
 import { mapMutations } from 'vuex'
 import UkForm from '~/components/uikit/form'
 import VanillaForm from '~/components/vanilla/form'
+import Vue from 'vue'
+import BotUI from 'botui/build/botui.js'
+import 'botui/build/botui.min.css'
+import 'botui/build/botui-theme-default.css'
+
+const r = require('rambda')
+
 export default {
   props: [
     'medium',
@@ -84,7 +94,8 @@ export default {
   ],
   components: {
     UkForm,
-    VanillaForm
+    VanillaForm,
+    BotUI
   },
   data() {
     return {
@@ -92,6 +103,9 @@ export default {
         message: '',
         type: ''
       },
+      events: [
+
+      ],
       story: [
         {
           title: 'Mini + Signs',
@@ -101,7 +115,8 @@ export default {
               call: "Write your message",
               type: "action"
             }
-          ]
+          ],
+          events: []
         }
       ],
       control: {
@@ -112,15 +127,15 @@ export default {
           },
           { 
             name: 'social',
-            checked: ''
+            checked: 'unchecked'
           },
           { 
             name: 'personal',
-            checked: ''
+            checked: 'unchecked'
           },
           { 
             name: 'private',
-            checked: ''
+            checked: 'unchecked'
           }
         ],
       }
@@ -130,13 +145,39 @@ export default {
     origin() { return this.$store.state.account }
   },
   methods: {
+    initBot() {
+      let botui = BotUI('mini-bot', { vue: Vue })
+      botui.message.add({ content: 'Hello World from bot!' })
+      .then(function () {
+        botui.message.add({
+          delay: 1000,
+          human: true,
+          content: 'Hello World from human!'
+        })
+      })
+    },
     handleSubmit() {
       // Send data to the server or update your stores and such.
       console.log("ACCOUNT FORM SUBMITTED", this.input.message)
       // this.$store.commit('user/set', this.account)
+      let signs = []
+      const Signs = this.$gun.get('mini/signs')
+      Signs.map().once(function(data, key){
+        let sign = {}
+        sign.text = data.name
+        signs.push(sign);
+      })
+
+      this.events = signs
+      console.log(signs)
     }
-  }
-  
+  },
+  mounted: function() {
+    this.$nextTick(function () {
+      console.log("MINI PAD LOADED")
+      this.initBot()
+    });
+  },
 }
 </script>
 
