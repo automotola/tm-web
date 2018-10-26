@@ -59,16 +59,16 @@
                           table.uk-table.uk-tsable-small.uk-table-divider.uk-table-hover.uk-margin-remove
                             thead
                               tr
-                                th From
                                 th Message
-                                th Time
+                                th From
+ 
                             tbody
                               tr(v-for="e in events").rounded
-                                td {{ e.from }}
                                 td {{ e.message }}
-                                td {{ e.time }}
+                                td {{ e.from }}
+
                     li
-                        .uk-overflow-auto.uk-height-small
+                        .uk-overflow-auto.uk-height-medium
                           table.uk-table.uk-tsable-small.uk-table-divider.uk-table-hover.uk-margin-remove
                             thead
                               tr
