@@ -4,7 +4,7 @@ import 'botui/build/botui.min.css'
 import 'botui/build/botui-theme-default.css'
 
 export default function initMiniBot() {
-  let botui = BotUI('mini-bot',  { vue: Vue } )
+  // let botui = BotUI('mini-bot',  { vue: Vue } )
   /* botui.message.add({ content: 'Hello World from Mini!' })
    .then(function () {
     botui.message.add({

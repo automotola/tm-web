@@ -4,26 +4,25 @@
       .hero-head
         .uk-container
           article.uk-section
-            h3 {{ story.title }}
-            p {{ story.description }}
+            h3 {{ story[0].title }}
+            p {{ story[0].description }}
       .hero-body.uk-padding-remove
           .uk-container
             .uk-margin
               .uk-card.rounded
-                  .uk-body.uk-padding-small
-                    #mini-bot
-                      bot-ui
+                  .uk-card-body.uk-padding-remove
                     pre {{ input }}
-                    .uk-margin-small(v-for="e in events")
-                      pre {{ e }}
-                  // .uk-overflow-auto
+            .uk-margin
+              .uk-overflow-auto
                     table.uk-table.uk-table-divider.uk-table-hover.uk-margin-remove.uk-table-responsive
                       thead
                         tr
-                          th User Name
+                          th Time
+                          th Message
                       tbody
-                        tr(v-for="user in users").rounded
-                          td {{ user }}
+                        tr(v-for="e in events").rounded
+                          td {{ e.time }}
+                          td {{ e.message }}
             // .uk-caruk-card-secondary.rounded
               .uk-panel.uk-text-center
                 template(v-for="symbol in state.symbology")
@@ -50,7 +49,7 @@
                               |  {{ option.name }}
                               br
                   input.uk-form-large.uk-input.shadow.rounded(:placeholder="story[0].plot[0].call" type="text" v-model='input.message' @keyup.enter="handleSubmit")
-            .uk-margin
+            // .uk-margin
               .uk-card
                 .uk-grid-collapse(class='uk-child-width-1-4', uk-grid='')
                   template(v-for="symbol in symbols")
@@ -90,7 +89,7 @@ export default {
   components: {
     UkForm,
     VanillaForm,
-    BotUI
+    // BotUI
   },
   data() {
     return {
@@ -103,8 +102,19 @@ export default {
       ],
       story: [
         {
-          title: 'Mini + Signs',
-          description: 'An example use case for MINI.',
+          title: 'Messaging',
+          description: 'Write a message!',
+          plot: [
+            {
+              call: "Write your message",
+              type: "action"
+            }
+          ],
+          events: []
+        },
+        {
+          title: 'Privacy',
+          description: 'Select your level of privacy.',
           plot: [
             {
               call: "Write your message",
@@ -149,6 +159,10 @@ export default {
       signal.type = this.input.type
 
       console.log("NEW SIGNAL", signal)
+      const story = this.events
+      console.log("OLD STORY", story)
+      story.push(signal)
+      console.log("NEW STORY",story)
 
       // this.$store.commit('user/set', this.account)
       const Signs = this.$gun.get('mini/signs')
