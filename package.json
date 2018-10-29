@@ -45,6 +45,7 @@
     "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
+    "archieml": "^0.4.2",
     "autoprefixer": "^8.6.4",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.7.0",

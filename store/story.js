@@ -1,47 +1,10 @@
+var archieml = require('archieml');
+var storetxt = require('~/static/txt/store.txt')
+var initialState = archieml.load(storetxt);
+console.log("STORE LOADED", initialState)
+
 export const state = () => ({
-  script: [
-    {
-      title: 'Messaging',
-      description: 'Write a message!',
-      activity: [
-        {
-          name: "user",
-          symbol: "user",
-          cue: "create a user",
-          type: "text",
-          valid: 'alpha_num|required|min:5'
-        },
-        {
-          name: "role",
-          symbol: "info",
-          cue: "write a role or description",
-          type: "text",
-          valid: 'required|min:10'
-        },
-        {
-          name: "message",
-          symbol: "comment",
-          cue: "write a message",
-          type: "text"
-        },
-        {
-          name: "context",
-          symbol: "rss",
-          cue: "select a broadcast",
-          type: "option",
-          default: 'private',
-          option: [
-            { name: 'context', symbol: 'rss', value: undefined, disabled: 'disabled' },
-            { name: 'private', symbol: 'lock', value: 'private', checked: '' },
-            { name: 'personal', symbol: 'users', value: 'personal', checked: '' },
-            { name: 'social', symbol: 'social', value: 'social', checked: '' },
-            { name: 'global', symbol: 'world', value: 'global', checked: '' }
-          ]
-        }
-      ],
-      event: []
-    }
-  ],
+  script: initialState.script
 })
 
 export const mutations = {

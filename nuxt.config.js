@@ -58,11 +58,11 @@ module.exports = {
     '@nuxtjs/markdownit',
 /*     ['@nuxtjs/localtunnel', { 
       subdomain: pkg.name
-    }], */
+    }], 
     ['nuxt-validate', {
       lang: 'es',
       // regular vee-validate options 
-    }]
+    }]*/
   ],
 
   /*

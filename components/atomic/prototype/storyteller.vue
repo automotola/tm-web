@@ -1,6 +1,12 @@
 <template lang="pug">
-.panel
-  mini-pad(:story="stories[0]" :users="contacts")
+div(uk-slider='center: true; clsActivated: uk-transition-active').panel
+  .uk-position-relative.uk-visible-toggle.uk-light
+    ul.uk-slider-items.uk-grid(class='uk-child-width-1-1@s' )
+      li(v-for="script in stories")
+        mini-pad(:story="script" :users="contacts" :user="profile")
+    a.uk-position-center-left.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-previous='', uk-slider-item='previous')
+    a.uk-position-center-right.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-next='', uk-slider-item='next')
+  ul.uk-slider-nav.uk-dotnav.uk-flex-center.uk-margin
 </template>
 <style>
 .spinning {
@@ -76,6 +82,9 @@ export default {
     contacts() { 
       return this.$store.state.user.contact
     },
+    profile() {
+      return this.$store.state.user.profile
+    }
   },
   mounted: function() {
     this.$nextTick(function () {

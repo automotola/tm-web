@@ -2,15 +2,15 @@
   .uk-panel
     section.hero.is-medium
       .hero-head
-        .uk-container
+        .uk-container 
             article.uk-section.uk-text-center.uk-article.uk-height-small
               h3.uk-article-meta {{ story.title }}
               p.uk-text-lead {{ story.description }}
       .hero-body.uk-padding-remove-top
-            .panel
+            .panel.uk-transition-slide-bottom-small
               tm-input(:story="story" @signature="checkSignature")
-              tm-output(:setting="setting")
-            .panel
+              tm-output(:setting="setting" :user="user")
+            // .panel
               ul(uk-accordion='')
                 li.uk-open
                   a.uk-accordion-title(href='#').uk-input
@@ -18,15 +18,16 @@
                   .uk-accordion-content.uk-textarea.uk-padding-remove.uk-margin-remove
                     ul.uk-tab(uk-tab='')
                       li.uk-active
-                        a(href='#') Users
+                        a Users
                       li 
                         a Messages
                     ul.uk-switcher
                       li
-                        p
-                          | Lorem ipsum dolor sit amet, consectetur adipiscing 
-                          | elit, sed do eiusmod tempor incididunt ut labore et 
-                          | dolore magna aliqua.
+                        dl.uk-description-list.uk-card.uk-card-body
+                          template(v-for="user in users") 
+                            dt {{ user.name }}
+                            dd {{ user.role }}
+
                       li
                         dl.uk-description-list.uk-card.uk-card-body
                           template(v-for="pulse in stream") 
@@ -81,7 +82,7 @@ import UkForm from '~/components/uikit/form'
 import UkTable from '~/components/uikit/table'
 
 import initMiniBot from '~/assets/js/bot-mini'
-const r = require('rambda')
+const R = require('rambda')
 
 export default {
   components: {
@@ -93,7 +94,8 @@ export default {
   },
   props: [
     'story',
-    'users'
+    'users',
+    'user'
   ],
   data() {
     return {
@@ -112,13 +114,45 @@ export default {
       console.log("SETTING", setting)
       // stream.push(pulse)
       // console.log("STREAM", stream)
-      // this.$store.commit('stream/sync', e)
+      // this.$store.commit('stream/sync', e) 
+
+      
+      let profile = {}
+      profile.name = setting.user
+      profile.role = setting.role
+      
+      const user = this.user
+      const users = this.users
+      const findUser = a => a.name === user.name
+      const userIndex = R.findIndex(findUser, users)
+      console.log("FOUND USER", userIndex, user)
+
+      let profileValues = R.values(profile)
+      let state1 = R.contains(undefined, profileValues)  
+      let state2 = R.contains('', profileValues) 
+      let state3 = userIndex === 1
+
+      let profileCompleted = !(state1 || state2 )
+      let profileUnique = !(state3)
+
+      const checkTrue = () => console.log("SEND")
+      const checkFalse = () => console.log("DON'T")
+      const setUser = (x) => {
+        this.$store.commit('user/set', x) 
+      }
+      const addUser = (x) => {
+        this.$store.commit('user/add', x)
+      }
+      // condition ? checkTrue() : checkFalse()
+      profileCompleted ? setUser(profile) : null
+      profileUnique ? addUser(profile) : null
+      console.log("OLD USER", user)
+      console.log("NEW USER", profile)
 
       let stream = this.stream
       this.setting = setting
       stream.push(setting)
       this.stream = stream
-      console.log("STREAM", stream)
       
       // CREATE NEW SIGNAL
       // CREATE NEW STREAM WITH SIGNAL
@@ -160,8 +194,7 @@ export default {
   },
   mounted: function() {
     this.$nextTick(function () {
-      console.log("MINI PAD LOADED")
-      console.log("MINI BOT LOADED")
+      console.log("MINIPAD LOADED:")
       // initMiniBot()
     });
   }

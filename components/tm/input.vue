@@ -1,10 +1,10 @@
 <template lang="pug">
-  .uk-margin-small
-    .uk-width-1-1(v-for="call in story.activity").uk-margin-remove
-      entry(:call="call" @signal="set")
+  form(@submit.prevent @click.prevent="sign")
+    .uk-width-1-1(v-for="action in story.activity").uk-margin-remove
+      entry(:action="action" @signal="set")
     .atom.uk-inline.uk-width-1-1
       span.uk-form-icon(uk-icon='play-circle')
-      input.uk-input.uk-button(type="submit" @click.prevent="sign")
+      input.uk-input.uk-button(type="submit")
 </template>
 <style>
 input[type="submit"] {
@@ -36,6 +36,7 @@ export default {
   },
   methods: {
     set(e) { 
+      console.log("SUBMITTED", e)
       let init = this.init
       let input = this.input
       let thread = { [e.target.name] : e.target.value }

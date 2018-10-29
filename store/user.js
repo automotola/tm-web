@@ -1,8 +1,9 @@
+export const strict = false
 
 export const state = () => ({
   profile: {
-    name: '',
-    role: ''
+    name: null,
+    role: null
   },
   contact: [
     { 
@@ -21,12 +22,12 @@ export const state = () => ({
  */
 export const mutations = {
   set(state, profile) {
-    console.log('MUTATION: Registering User Account, ' + profile.name)
-    state.account = profile
+    console.log('MUTATION: User Account, ' + profile.name)
+    state.profile = profile
   },
   add(state, profile) {
     console.log('MUTATION: Adding User to Register: ' + profile.name)
-    state.contacts.push(profile)
+    state.contact.push(profile)
   },
   remove(state, { profile }) {
     state.contacts.splice(state.contacts.indexOf(profile), 1)
