@@ -44,7 +44,7 @@
                 a Overview
 </template>
 <script>
-import Graph from '~/components/organisms/graph'
+import Graph from '~/components/atomic/organism/graph'
 export default {
   props: [
     'brandName',

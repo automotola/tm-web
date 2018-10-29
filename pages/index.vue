@@ -3,7 +3,7 @@
   SignsHero(:content="content")
 </template>
 <script>
-import SignsHero from '~/components/molecules/SignsHero'
+import SignsHero from '~/components/atomic/molecule/SignsHero'
 
 export default {
   layout: 'abrie',

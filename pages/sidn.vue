@@ -8,7 +8,7 @@
             a(href='#') Account
       // ul.uk-switcher.uk-margin#screen
         li
-      mini(:content="content")
+      storyteller
     .uk-panel.uk-background-muted.uk-padding#screen
       article(v-html="$md.render(article)" uk-overflow-auto)
 </template>
@@ -20,12 +20,12 @@
 </style>
 
 <script>
-import mini from '~/components/templates/mini'
+import storyteller from '~/components/atomic/prototype/storyteller'
 
 export default {
   layout: 'melissa',
   components: {
-    mini,
+    storyteller
   },
   created() {
     this.getItems()
@@ -41,16 +41,6 @@ export default {
   data () {
     return {
       article: '',
-      options: {
-        graph: true,
-        scene: true,
-        field: true,
-        location: true,
-      },
-      content: {
-        hero: true,
-        logo: false
-      }
     }
   }
 }

@@ -44,6 +44,7 @@ module.exports = {
     '~/plugins/vueGun',
     '~/plugins/vueEditable',
     '~/plugins/vueMarkdown',
+    '~/plugins/vueValidate',
     // '~/plugins/vueBot'
   ],
 
@@ -54,7 +55,14 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+/*     ['@nuxtjs/localtunnel', { 
+      subdomain: pkg.name
+    }], */
+    ['nuxt-validate', {
+      lang: 'es',
+      // regular vee-validate options 
+    }]
   ],
 
   /*

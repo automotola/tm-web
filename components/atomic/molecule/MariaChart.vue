@@ -3,7 +3,7 @@
     chart(:data="computedData").card
 </template>
 <script>
-import chart from '~/components/organisms/chart'
+import chart from '~/components/atomic/organism/chart'
 const R = require('rambda')
 export default {
     props: [
