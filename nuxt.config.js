@@ -108,13 +108,13 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        }),
-        config.module.rules.push({
-          test: /\.txt$/,
-          use: 'raw-loader'
         })
         // config.resolve.alias['vue'] = 'vue/dist/vue.min.js'
       }
+      config.module.rules.push({
+        test: /\.txt$/,
+        use: 'raw-loader'
+      })
     }
   },
 }

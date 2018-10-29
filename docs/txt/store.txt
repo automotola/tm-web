@@ -1,0 +1,50 @@
+[script]
+title: registration
+description: create a profile!
+[.activity]
+name: user
+symbol: user
+cue: create a user
+type: text
+
+name: role
+symbol: info
+cue: write a role of description
+type: text
+[]
+
+title: networking
+description: share messages 
+[.activity]
+name: message
+symbol: comment
+cue: write a message
+type: text
+
+name: context
+symbol: rss
+cue: select a broadcast
+type: option
+[.option]
+name: context
+symbol: rss
+value: 
+disabled: disabled
+
+name: private
+symbol: lock
+value: private
+
+name: personal
+symbol: users
+value: personal
+
+name: social
+symbol: social
+value: social
+
+name: global
+symbol: world
+value: global
+[]
+[]
