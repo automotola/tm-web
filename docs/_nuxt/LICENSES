@@ -1,0 +1,690 @@
+/*!
+ * Vue.js v2.5.17
+ * (c) 2014-2018 Evan You
+ * Released under the MIT License.
+ */
+
+/**
+ * vuex v3.0.1
+ * (c) 2017 Evan You
+ * @license MIT
+ */
+
+/**
+  * vue-router v3.0.1
+  * (c) 2017 Evan You
+  * @license MIT
+  */
+
+/**
+ * vue-meta v1.5.4
+ * (c) 2018 Declan de Wet & Sébastien Chopin (@Atinux)
+ * @license MIT
+ */
+
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+
+/*!*************************!*\
+  !*** ./dist/icons.json ***!
+  \*************************/
+
+/*! exports provided: activity, airplay, alert-circle, alert-octagon, alert-triangle, align-center, align-justify, align-left, align-right, anchor, aperture, archive, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, award, bar-chart-2, bar-chart, battery-charging, battery, bell-off, bell, bluetooth, bold, book-open, book, bookmark, box, briefcase, calendar, camera-off, camera, cast, check-circle, check-square, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, chrome, circle, clipboard, clock, cloud-drizzle, cloud-lightning, cloud-off, cloud-rain, cloud-snow, cloud, code, codepen, coffee, command, compass, copy, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, cpu, credit-card, crop, crosshair, database, delete, disc, dollar-sign, download-cloud, download, droplet, edit-2, edit-3, edit, external-link, eye-off, eye, facebook, fast-forward, feather, file-minus, file-plus, file-text, file, film, filter, flag, folder-minus, folder-plus, folder, gift, git-branch, git-commit, git-merge, git-pull-request, github, gitlab, globe, grid, hard-drive, hash, headphones, heart, help-circle, home, image, inbox, info, instagram, italic, layers, layout, life-buoy, link-2, link, linkedin, list, loader, lock, log-in, log-out, mail, map-pin, map, maximize-2, maximize, menu, message-circle, message-square, mic-off, mic, minimize-2, minimize, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, package, paperclip, pause-circle, pause, percent, phone-call, phone-forwarded, phone-incoming, phone-missed, phone-off, phone-outgoing, phone, pie-chart, play-circle, play, plus-circle, plus-square, plus, pocket, power, printer, radio, refresh-ccw, refresh-cw, repeat, rewind, rotate-ccw, rotate-cw, rss, save, scissors, search, send, server, settings, share-2, share, shield-off, shield, shopping-bag, shopping-cart, shuffle, sidebar, skip-back, skip-forward, slack, slash, sliders, smartphone, speaker, square, star, stop-circle, sun, sunrise, sunset, tablet, tag, target, terminal, thermometer, thumbs-down, thumbs-up, toggle-left, toggle-right, trash-2, trash, trello, trending-down, trending-up, triangle, truck, tv, twitter, type, umbrella, underline, unlock, upload-cloud, upload, user-check, user-minus, user-plus, user-x, user, users, video-off, video, voicemail, volume-1, volume-2, volume-x, volume, watch, wifi-off, wifi, wind, x-circle, x-square, x, youtube, zap-off, zap, zoom-in, zoom-out, default */
+
+/*!*******************************************!*\
+  !*** ./node_modules/classnames/dedupe.js ***!
+  \*******************************************/
+
+/*! no static exports found */
+
+/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/fn/array/from.js ***!
+  \***********************************************/
+
+/*! no static exports found */
+
+/*! ../../modules/es6.string.iterator */
+
+/*! ../../modules/es6.array.from */
+
+/*! ../../modules/_core */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_a-function.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_an-object.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_is-object */
+
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-includes.js ***!
+  \*********************************************************/
+
+/*! no static exports found */
+
+/*! ./_to-iobject */
+
+/*! ./_to-length */
+
+/*! ./_to-absolute-index */
+
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_classof.js ***!
+  \**************************************************/
+
+/*! no static exports found */
+
+/*! ./_cof */
+
+/*! ./_wks */
+
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_cof.js ***!
+  \**********************************************/
+
+/*! no static exports found */
+
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_core.js ***!
+  \***********************************************/
+
+/*! no static exports found */
+
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/_create-property.js ***!
+  \**********************************************************/
+
+/*! no static exports found */
+
+/*! ./_object-dp */
+
+/*! ./_property-desc */
+
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_ctx.js ***!
+  \**********************************************/
+
+/*! no static exports found */
+
+/*! ./_a-function */
+
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_defined.js ***!
+  \**************************************************/
+
+/*! no static exports found */
+
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_descriptors.js ***!
+  \******************************************************/
+
+/*! no static exports found */
+
+/*! ./_fails */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_dom-create.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*! ./_is-object */
+
+/*! ./_global */
+
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_enum-bug-keys.js ***!
+  \********************************************************/
+
+/*! no static exports found */
+
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_export.js ***!
+  \*************************************************/
+
+/*! no static exports found */
+
+/*! ./_global */
+
+/*! ./_core */
+
+/*! ./_hide */
+
+/*! ./_redefine */
+
+/*! ./_ctx */
+
+/*!************************************************!*\
+  !*** ./node_modules/core-js/modules/_fails.js ***!
+  \************************************************/
+
+/*! no static exports found */
+
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_global.js ***!
+  \*************************************************/
+
+/*! no static exports found */
+
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_has.js ***!
+  \**********************************************/
+
+/*! no static exports found */
+
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_hide.js ***!
+  \***********************************************/
+
+/*! no static exports found */
+
+/*! ./_object-dp */
+
+/*! ./_property-desc */
+
+/*! ./_descriptors */
+
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_html.js ***!
+  \***********************************************/
+
+/*! no static exports found */
+
+/*! ./_global */
+
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/_ie8-dom-define.js ***!
+  \*********************************************************/
+
+/*! no static exports found */
+
+/*! ./_descriptors */
+
+/*! ./_fails */
+
+/*! ./_dom-create */
+
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_iobject.js ***!
+  \**************************************************/
+
+/*! no static exports found */
+
+/*! ./_cof */
+
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_is-array-iter.js ***!
+  \********************************************************/
+
+/*! no static exports found */
+
+/*! ./_iterators */
+
+/*! ./_wks */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_is-object.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-call.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_an-object */
+
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-create.js ***!
+  \******************************************************/
+
+/*! no static exports found */
+
+/*! ./_object-create */
+
+/*! ./_property-desc */
+
+/*! ./_set-to-string-tag */
+
+/*! ./_hide */
+
+/*! ./_wks */
+
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-define.js ***!
+  \******************************************************/
+
+/*! no static exports found */
+
+/*! ./_library */
+
+/*! ./_export */
+
+/*! ./_redefine */
+
+/*! ./_hide */
+
+/*! ./_iterators */
+
+/*! ./_iter-create */
+
+/*! ./_set-to-string-tag */
+
+/*! ./_object-gpo */
+
+/*! ./_wks */
+
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-detect.js ***!
+  \******************************************************/
+
+/*! no static exports found */
+
+/*! ./_wks */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_iterators.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_library.js ***!
+  \**************************************************/
+
+/*! no static exports found */
+
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-create.js ***!
+  \********************************************************/
+
+/*! no static exports found */
+
+/*! ./_an-object */
+
+/*! ./_object-dps */
+
+/*! ./_enum-bug-keys */
+
+/*! ./_shared-key */
+
+/*! ./_dom-create */
+
+/*! ./_html */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-dp.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_an-object */
+
+/*! ./_ie8-dom-define */
+
+/*! ./_to-primitive */
+
+/*! ./_descriptors */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-dps.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*! ./_object-dp */
+
+/*! ./_an-object */
+
+/*! ./_object-keys */
+
+/*! ./_descriptors */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-gpo.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*! ./_has */
+
+/*! ./_to-object */
+
+/*! ./_shared-key */
+
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-keys-internal.js ***!
+  \***************************************************************/
+
+/*! no static exports found */
+
+/*! ./_has */
+
+/*! ./_to-iobject */
+
+/*! ./_array-includes */
+
+/*! ./_shared-key */
+
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-keys.js ***!
+  \******************************************************/
+
+/*! no static exports found */
+
+/*! ./_object-keys-internal */
+
+/*! ./_enum-bug-keys */
+
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_property-desc.js ***!
+  \********************************************************/
+
+/*! no static exports found */
+
+/*!***************************************************!*\
+  !*** ./node_modules/core-js/modules/_redefine.js ***!
+  \***************************************************/
+
+/*! no static exports found */
+
+/*! ./_global */
+
+/*! ./_hide */
+
+/*! ./_has */
+
+/*! ./_uid */
+
+/*! ./_core */
+
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-to-string-tag.js ***!
+  \************************************************************/
+
+/*! no static exports found */
+
+/*! ./_object-dp */
+
+/*! ./_has */
+
+/*! ./_wks */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_shared-key.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*! ./_shared */
+
+/*! ./_uid */
+
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_shared.js ***!
+  \*************************************************/
+
+/*! no static exports found */
+
+/*! ./_core */
+
+/*! ./_global */
+
+/*! ./_library */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_string-at.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_to-integer */
+
+/*! ./_defined */
+
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-absolute-index.js ***!
+  \************************************************************/
+
+/*! no static exports found */
+
+/*! ./_to-integer */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-integer.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-iobject.js ***!
+  \*****************************************************/
+
+/*! no static exports found */
+
+/*! ./_iobject */
+
+/*! ./_defined */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-length.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_to-integer */
+
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-object.js ***!
+  \****************************************************/
+
+/*! no static exports found */
+
+/*! ./_defined */
+
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-primitive.js ***!
+  \*******************************************************/
+
+/*! no static exports found */
+
+/*! ./_is-object */
+
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_uid.js ***!
+  \**********************************************/
+
+/*! no static exports found */
+
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_wks.js ***!
+  \**********************************************/
+
+/*! no static exports found */
+
+/*! ./_shared */
+
+/*! ./_uid */
+
+/*! ./_global */
+
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/modules/core.get-iterator-method.js ***!
+  \******************************************************************/
+
+/*! no static exports found */
+
+/*! ./_classof */
+
+/*! ./_wks */
+
+/*! ./_iterators */
+
+/*! ./_core */
+
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.array.from.js ***!
+  \********************************************************/
+
+/*! no static exports found */
+
+/*! ./_ctx */
+
+/*! ./_export */
+
+/*! ./_to-object */
+
+/*! ./_iter-call */
+
+/*! ./_is-array-iter */
+
+/*! ./_to-length */
+
+/*! ./_create-property */
+
+/*! ./core.get-iterator-method */
+
+/*! ./_iter-detect */
+
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.string.iterator.js ***!
+  \*************************************************************/
+
+/*! no static exports found */
+
+/*! ./_string-at */
+
+/*! ./_iter-define */
+
+/*!********************************!*\
+  !*** ./src/default-attrs.json ***!
+  \********************************/
+
+/*! exports provided: xmlns, width, height, viewBox, fill, stroke, stroke-width, stroke-linecap, stroke-linejoin, default */
+
+/*!*********************!*\
+  !*** ./src/icon.js ***!
+  \*********************/
+
+/*! no static exports found */
+
+/*! classnames/dedupe */
+
+/*! ./default-attrs.json */
+
+/*!**********************!*\
+  !*** ./src/icons.js ***!
+  \**********************/
+
+/*! no static exports found */
+
+/*! ./icon */
+
+/*! ../dist/icons.json */
+
+/*! ./tags.json */
+
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+
+/*! no static exports found */
+
+/*! ./icons */
+
+/*! ./to-svg */
+
+/*! ./replace */
+
+/*!************************!*\
+  !*** ./src/replace.js ***!
+  \************************/
+
+/*! no static exports found */
+
+/*! classnames/dedupe */
+
+/*! ./icons */
+
+/*!***********************!*\
+  !*** ./src/tags.json ***!
+  \***********************/
+
+/*! exports provided: activity, airplay, alert-circle, alert-octagon, alert-triangle, at-sign, award, aperture, bell, bell-off, bluetooth, book-open, book, bookmark, briefcase, clipboard, clock, cloud-drizzle, cloud-lightning, cloud-rain, cloud-snow, cloud, codepen, coffee, command, compass, copy, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, credit-card, crop, crosshair, database, delete, disc, dollar-sign, droplet, edit, edit-2, edit-3, eye, eye-off, external-link, facebook, fast-forward, film, folder-minus, folder-plus, folder, gift, git-branch, git-commit, git-merge, git-pull-request, github, gitlab, global, hard-drive, hash, headphones, heart, help-circle, home, image, inbox, instagram, life-bouy, linkedin, lock, log-in, log-out, mail, map-pin, map, maximize, maximize-2, menu, message-circle, message-square, mic-off, mic, minimize, minimize-2, monitor, moon, more-horizontal, more-vertical, move, navigation, navigation-2, octagon, package, paperclip, pause, pause-circle, play, play-circle, plus, plus-circle, plus-square, pocket, power, radio, rewind, rss, save, send, settings, shield, shield-off, shopping-bag, shopping-cart, shuffle, skip-back, skip-forward, slash, sliders, speaker, star, sun, sunrise, sunset, tag, target, terminal, thumbs-down, thumbs-up, toggle-left, toggle-right, trash, trash-2, triangle, truck, twitter, umbrella, video-off, video, voicemail, volume, volume-1, volume-2, volume-x, watch, wind, x-circle, x-square, x, youtube, zap-off, zap, default */
+
+/*!***********************!*\
+  !*** ./src/to-svg.js ***!
+  \***********************/
+
+/*! no static exports found */
+
+/*! ./icons */
+
+/*!**************************************************!*\
+  !*** multi core-js/fn/array/from ./src/index.js ***!
+  \**************************************************/
+
+/*! no static exports found */
+
+/*! core-js/fn/array/from */
+
+/*! /home/travis/build/feathericons/feather/src/index.js */
+
+/* @license
+Papa Parse
+v4.6.1
+https://github.com/mholt/PapaParse
+License: MIT
+*/
+
+/*!
+ * vue-no-ssr v1.0.0
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/**
+  * vee-validate v2.0.9
+  * (c) 2018 Abdelrahman Awad
+  * @license MIT
+  */
+
+/*! https://mths.be/punycode v1.4.1 by @mathias */
