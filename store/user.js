@@ -35,12 +35,12 @@ export const mutations = {
 }
 
 export const getters = {
-  account(state) {
-    console.log('GETTING: Registered User Account')
-    return state.account
+  profile(state) {
+    console.log('GETTING: Registered Profile')
+    return state.profile
   },
   contacts(state) {
-    console.log('GETTING: Registered User Account')
+    console.log('GETTING: Registered User Contacts')
     return state.contacts
   }
 }

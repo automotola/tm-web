@@ -1,22 +1,11 @@
 <template lang="pug">
-.panel
-  SignsHero(:content="content")
+  nuxt-link(to="/pulse").button.is-large.is-fullwidth Pulse
 </template>
 <script>
-import SignsHero from '~/components/atomic/molecule/SignsHero'
-
 export default {
   layout: 'abrie',
-  components: {
-    SignsHero,
-  },
-  data () {
-    return {
-      content: {
-        hero: true,
-        logo: true
-      }
-    }
+  created() {
+    this
   }
 }
 </script>

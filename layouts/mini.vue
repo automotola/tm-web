@@ -17,8 +17,8 @@ export default {
       { hid: 'description', name: 'description', content: "" }
     ],
   },
-  mounted: () => {
-    console.log("MINI LAYOUT INTIATED")
+  created: () => {
+    console.log("MINI LAYOUT CREATED")
   }
 }
 </script>

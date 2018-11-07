@@ -7,6 +7,7 @@ Vue.use(VueGun, {
 }); */
 
 Vue.use(VueGun, {
-  peers: ['https://gunjs.herokuapp.com/gun']
+  peers: ['https://athensux.herokuapp.com/gun']
 });
+
 

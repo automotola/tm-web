@@ -1,10 +1,10 @@
 var archieml = require('archieml');
-var storetxt = require('~/static/txt/store.txt')
+var storetxt = require('~/static/txt/maria.txt')
 var initialState = archieml.load(storetxt);
-console.log("STORE LOADED", initialState)
 
 export const state = () => ({
-  script: initialState.script
+  script: initialState.script,
+  point: 0
 })
 
 export const mutations = {

@@ -19,7 +19,8 @@ module.exports = {
     ],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/js/uikit.min.js' },
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/js/uikit-icons.min.js' }
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/js/uikit-icons.min.js' },
+      { src: 'https://unpkg.com/feather-icons' }
     ]
   },
 
@@ -43,8 +44,9 @@ module.exports = {
     '~/plugins/vueAxios',
     '~/plugins/vueGun',
     '~/plugins/vueEditable',
-    '~/plugins/vueMarkdown',
     '~/plugins/vueValidate',
+    '~/plugins/vueForm',
+    '~/plugins/vueMarker',
     // '~/plugins/vueBot'
   ],
 
@@ -81,7 +83,8 @@ module.exports = {
     breaks: true,
     use: [
       // ['markdown-it-container', containerName],
-      'markdown-it-attrs'
+      'markdown-it-attrs',
+      'markdown-it-plantuml'
     ]
   },
 
@@ -114,6 +117,10 @@ module.exports = {
       config.module.rules.push({
         test: /\.txt$/,
         use: 'raw-loader'
+      })
+      config.module.rules.push({
+        test: /\.csv$/,
+        use: 'csv-loader'
       })
     }
   },

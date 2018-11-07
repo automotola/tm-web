@@ -1,11 +1,13 @@
 export const strict = false
 
 export const state = () => ({
-  signals: [] 
+  instance: {
+    
+  } 
 })
 
 export const mutations = {
-  signal(state, event) {
-    state.signals.push(event)
-  } 
+  instance(state, instance) {
+    state.instance = instance
+  }
 }
