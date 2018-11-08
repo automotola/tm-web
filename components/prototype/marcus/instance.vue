@@ -24,7 +24,7 @@
                 .level-right
                   span.tag {{ output.domain }}
     .card-content.is-paddingless(v-else-if="story.type === 'profile'")
-      .uk-card.uk-card-default(class='uk-width-1-2@m')
+      .uk-card.uk-card-default
         // .uk-card-media-top
           img(src='https://placeholdit.co//i/385x243?&bg=black&fc=white&text=text', alt='')
         .uk-card-header

@@ -6,55 +6,26 @@
             article.uk-section.uk-text-center.uk-article
               h3.uk-article-meta {{ story.name }}
               p.uk-text-lead {{ story.description }}
-      .hero-body.panel.uk-padding-remove-vertical
+      .hero-body.panel.uk-padding-remove-top
             .panel
               model(:story="story" @instance="createStatement").uk-transition-slide-bottom-small
             .panel
-              instance(:story="story" :output="output" :user="user")
+              content-loader.uk-background-muted(v-if='output === undefined', :speed='2', :animate='true', primaryColor="#f3f3f3", secondaryColor="#ecebeb", :height="103", :width="299")
+                rect(x='86', y='28', rx='3', ry='3', width='128.64', height='7.42')
+                rect(x='50', y='47', rx='3', ry='3', width='201', height='7.42')
+                rect(x='50', y='68', rx='3', ry='3', width='201', height='7.42')
+              instance(v-else :story="story" :output="output" :user="user")
       .hero-foot
 </template>
-<style>
-a.uk-accordion-title.uk-input::before {
-    content: "";
-    width: 1.4em;
-    height: 1.4em;
-    margin-top: 5px;
-    margin-left: 10px;
-    float: right;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-.uk-input span.uk-icon svg {
-  margin-bottom: 2px;
-}
-
-.uk-form-large:not(textarea):not([multiple]):not([size]) {
-  padding-right: 45px!important;
-}
-.uk-form-large:not(textarea):not([multiple]):not([size]) {
-  padding-left: 45px!important;
-}
-.uk-margin-small-right {
-  margin-right: 5px!important;
-}
-.uk-margin-small-left {
-  margin-left: 5px!important;
-}
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-</style>
-
 <script>
+import { ContentLoader } from 'vue-content-loader';
+
 import { mapMutations } from 'vuex'
 import { mapActions } from 'vuex'
 
 import Model from './model'
 import Instance from './instance'
+
 
 import initMiniBot from '~/assets/js/bot-mini'
 const R = require('rambda')
@@ -62,7 +33,8 @@ const R = require('rambda')
 export default {
   components: {
     Model,
-    Instance
+    Instance,
+    ContentLoader
     // BotUI
   },
   props: [
@@ -73,7 +45,7 @@ export default {
   ],
   data() {
     return {
-      output: {}
+      output: undefined
     }
   },
   methods: {

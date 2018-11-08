@@ -1,9 +1,7 @@
 export const strict = false
 
 export const state = () => ({
-  instance: {
-    
-  } 
+  instance: undefined
 })
 
 export const mutations = {

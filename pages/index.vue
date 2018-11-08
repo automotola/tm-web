@@ -1,11 +1,22 @@
 <template lang="pug">
-  nuxt-link(to="/pulse").button.is-large.is-fullwidth Pulse
+.panel
+  SignsHero(:content="content")
 </template>
 <script>
+import SignsHero from '~/components/prototype/signs/SignsHero'
+
 export default {
   layout: 'abrie',
-  created() {
-    this
+  components: {
+    SignsHero,
+  },
+  data () {
+    return {
+      content: {
+        hero: true,
+        logo: true
+      }
+    }
   }
 }
 </script>
