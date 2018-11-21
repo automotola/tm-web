@@ -1,5 +1,6 @@
 <template lang="pug">
-      .hero.is-fullheight
+a(href="https://docs.google.com/presentation/d/1F-lxT0Gzq-EuDjB9podaNtnvyhAsh78d2gmhyBw4ctk/edit?usp=sharing") PRESENTATION
+      //.hero.is-fullheight
         .hero-body
           nav.column.is-one-third-tablet.is-one-quarter-desktop
             menu-b
@@ -13,6 +14,7 @@
             banshee-tab( v-for="tab in slides" :key="tab.index" ) 
               span.icon
                 i.fas.fa-home {{ tab.id }}
+                
           
 </template>
 <script>
