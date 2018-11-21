@@ -1,9 +1,10 @@
 var archieml = require('archieml');
-var storetxt = require('~/static/txt/maria.txt')
-var initialState = archieml.load(storetxt);
+var storytxt = require('~/static/txt/mini.txt')
+var miniStory = archieml.load(storytxt);
+console.log(miniStory)
 
 export const state = () => ({
-  script: initialState.script,
+  script: miniStory.script,
   point: 0
 })
 

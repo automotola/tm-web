@@ -1,0 +1,104 @@
+[script]
+
+name: profile
+description: create your profile
+type: create
+symbol: user
+[.activity]
+
+cue: create a username
+name: name
+symbol: user
+type: text
+
+cue: write an email address
+name: email
+symbol: mail
+type: email
+
+cue: select a your city
+name: city
+symbol: location
+type: text
+
+[]
+
+name: sensor
+description: connect your sensor
+type: connect
+symbol: rss
+[.activity]
+
+cue: write your sensor's id
+name: name
+symbol: tag
+type: text
+
+cue: element
+name: name
+symbol: star
+type: text
+
+cue: enter the geolocation details 
+name: geo
+symbol: location
+type: text
+
+[]
+
+name: signal
+description: Collect your signals
+type: collect
+[.activity]
+
+name: location
+symbol: rss
+cue: select a location
+type: option
+[.option]
+name: Rotterdam
+symbol: location
+value: 
+disabled: disabled
+
+name: Utrecht
+symbol: location
+value: private
+
+name: Zwolle
+symbol: location
+value: private
+[]
+
+name: element
+symbol: rss
+cue: select an element
+type: option
+[.option]
+name: element
+symbol: bolt
+value: 
+disabled: disabled
+
+name: plants
+symbol: world
+value: private
+
+name: water
+symbol: world
+value: personal
+
+name: soil
+symbol: world
+value: social
+
+name: air
+symbol: world
+value: global
+[]
+
+name: time
+cue: time of data
+symbol: clock
+type: text
+[]

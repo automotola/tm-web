@@ -1,37 +1,44 @@
 <template lang="pug">
-  .uk-card.uk-card-default
-    .uk-card-media
-      view-map(:data="data" :table="table")
-    .uk-card-body.uk-padding-remove.uk-overflow-auto.uk-height-medium
+  .uk-tile.uk-padding-remove
+    media(:item="item")
+    // .uk-card-media
+      view-map(:data="item")
+    // .uk-card-body.uk-padding-remove.uk-overflow-auto.uk-height-medium
       view-list(:data="table")
     // i(data-feather="map")
 </template>
 <script>
 import ViewMap from '~/components/prototype/maria/view-map'
 import ViewList from '~/components/prototype/maria/view-list'
-import feather from 'feather-icons'
+import Media from './media'
+// import feather from 'feather-icons'
 export default {
   props: [
-    'data'
+    'item'
   ],
   components: {
     ViewList,
-    ViewMap
+    ViewMap,
+    Media
+  },
+  created: function() {
+    console.log("uikit card created")
   },
   mounted: function() {
-    feather.replace()
+    console.log("uikit card mounted")
+    // feather.replace()
   },
   computed: {
-    table: function () {
+/*     table: function () {
       const R = require('rambda')
-      let csv = require(`~/static/csv/${this.data.name}.csv`)
+      let csv = require(`~/static/csv/${this.item.name}.csv`)
       let table = this.$mark.wasTable('utrecht', csv)
       let oldRows = table.rows
       let oldKeys = table.keys
       table.rows = this.$mark.wasArray(oldRows, 3)
       table.keys = R.take(3, oldKeys)
       return table
-    }
+    } */
   }
 }
 </script>

@@ -62,6 +62,4 @@ tm.wasObject = (x, y) => {
 }
 
 
-
-
 export default tm

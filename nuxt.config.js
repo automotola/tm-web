@@ -28,7 +28,7 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
-
+  
   /*
   ** Global CSS
   */
@@ -47,6 +47,8 @@ module.exports = {
     '~/plugins/vueValidate',
     '~/plugins/vueForm',
     '~/plugins/vueMarker',
+    '~/plugins/vueTensorflow',
+    '~/plugins/vueBanshee'
     // '~/plugins/vueBot'
   ],
 
@@ -58,6 +60,7 @@ module.exports = {
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    '@nuxtjs/pwa'
 /*     ['@nuxtjs/localtunnel', { 
       subdomain: pkg.name
     }], 

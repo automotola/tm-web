@@ -1,6 +1,5 @@
 <template lang="pug">
-  .uk-background-primary(uk-height-viewport)
-    nuxt
+  nuxt
 </template>
 <script>
 export default {

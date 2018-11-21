@@ -1,4 +1,4 @@
 <template lang="pug">
-  .uk-background-primary(uk-height-viewport)
+  .uk-background-default(uk-height-viewport)
     nuxt
 </template>

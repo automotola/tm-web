@@ -1,0 +1,174 @@
+/* Fonts & Colors */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.uk-nav {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.uk-nav {
+    color: #53536e !important;
+}
+
+
+/* Top navigation */
+
+#top-head {
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #30304b;
+    height: 52px;
+}
+
+
+/* Smaller Header */
+
+.uk-navbar,
+.uk-navbar-nav,
+.uk-navbar-item,
+.uk-navbar-toggle {
+    height: 52px;
+}
+
+.uk-navbar-nav>li {
+    position: relative;
+    top: -12px;
+}
+
+.uk-navbar-nav>li>a {
+    padding: 0 8px;
+}
+
+
+/* Left sidebar menu */
+
+#left-col {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #30304b;
+    width: 240px;
+    z-index: 2;
+    transition: height 0.3s ease-out;
+    padding-top: 40px;
+    text-transform: uppercase;
+}
+
+
+/* Left bar links */
+
+#left-col ul.uk-nav-default>li>a {
+    padding: 12px 20px;
+    border-left: 2px solid transparent;
+    transition: all 0.15s ease-out;
+}
+
+#left-col ul.uk-nav-default li.uk-nav-header {
+    padding: 20px 20px 8px 20px;
+}
+
+#left-col ul.uk-nav-default>li>a:hover,
+#left-col ul.uk-nav-default>li.uk-open>a {
+    border-left: 2px solid #39f;
+    padding-left: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Page contents */
+
+#content {
+    margin-top: 52px;
+    padding: 30px 0 0 0;
+    background-color: #21213e;
+    margin-left: 0;
+    transition: margin 0.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+@media screen and (min-width: 960px) {
+    #content {
+        /* equal to left-col width */
+        margin-left: 240px;
+    }
+    #top-head {
+        /* equal to left-col width */
+        left: 240px;
+    }
+}
+
+
+/* Cards */
+
+.uk-card {
+    background-color: #30304b;
+    color: #fff;
+}
+
+.uk-card-title {
+    color: #53536e !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-top: 40px;
+}
+
+
+/* Progress bars */
+
+.uk-progress {
+    width: 200px;
+    height: 3px;
+    margin-bottom: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.23);
+    position: absolute;
+    bottom: 20px;
+}
+
+*+.uk-progress {
+    margin-top: 0.25rem;
+}
+
+.uk-progress.warning::-webkit-progress-value {
+    background-color: #faa05a;
+}
+
+.uk-progress.warning::-moz-progress-bar {
+    background-color: #faa05a;
+}
+
+.uk-progress.warning::-ms-fill {
+    background-color: #faa05a;
+}
+
+.uk-progress.success::-webkit-progress-value {
+    background-color: #32d296;
+}
+
+.uk-progress.success::-moz-progress-bar {
+    background-color: #32d296;
+}
+
+.uk-progress.success::-ms-fill {
+    background-color: #32d296;
+}
+
+
+/* Navigation bar */
+
+.uk-navbar {
+    background-color: #30304b !important;
+}

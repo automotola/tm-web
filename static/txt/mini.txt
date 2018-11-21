@@ -1,3 +1,25 @@
+uid: mini
+title: The Message Insight Network Interpreter
+description: This is a story about a decentralised networking protocol for preserving privacy.
+[+plot] 
+It comes down to showing the graph of entities, the information a node holds for each entity and the data the entities share in edges.
+
+The next step is selecting a sequence of nodes, looking for property groups that match a signal* that has been predefined in a model or context.
+
+1. Create a pointer node
+2. Create a property/child node for this pointer from a given model
+3. Produce a timeseries record of the changes in weights as time changes (chart)
+4. Repeat step 3 and 4 for each property
+5. Create a target node
+6. Create a peer/sibling edge for this target from a given context
+7. Produce a strategy record of the possible changes in properties as context changes (tree)
+8. Repeat step 6 and 7 for each peer
+9. Create a graph with a target node for each edge in the previous graph
+10. Create a corrolation edge with any target node graph with a node for each
+10. Repeat 4 for each 
+
+[]
+
 [script]
 
 name: account
@@ -45,4 +67,14 @@ name: global
 symbol: world
 value: global
 []
+[]
+
+[journey]
+id: 1
+name: why 
+image: https://picsum.photos/200?image=1074
+content.text: Why?
+[.content.tags] 
+* neurodiversity
+* neurology
 []

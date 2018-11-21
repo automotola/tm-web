@@ -86,3 +86,6 @@ dist
 
 ##
 .DS_Store
+
+#SW
+sw.*

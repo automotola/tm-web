@@ -1,11 +1,9 @@
 <template lang="pug">
 .hero
   .container
-    .hero-body
-      p "hello"
-    .hero-footer.columns
-      .column(v-for="area in areas")
-        card(:data="area")
+    .columns
+      .column(v-for="item in item.list")
+        card(:item="item")
 </template>
 <script>
 import card from '~/components/pure/uikit/card'
@@ -16,7 +14,9 @@ export default {
   },
   data() {
     return {
-      areas: [
+      item: {
+        name: 'location',
+        list:[
         {
           name: 'utrecht',
           center: [5.1214201, 52.0907374],
@@ -31,7 +31,8 @@ export default {
           name: 'Rotterdam',
           center: [4.4777325, 51.9244201]
         } */
-      ]
+        ]
+      }
     }
   },
   computed: {
