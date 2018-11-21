@@ -60,7 +60,7 @@ module.exports = {
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    '@nuxtjs/pwa'
+    ['@nuxtjs/pwa', { workbox: { publicPath: '/_nuxt/' }, manifest: { publicPath: "/_nuxt/" } }]
 /*     ['@nuxtjs/localtunnel', { 
       subdomain: pkg.name
     }], 
@@ -90,6 +90,7 @@ module.exports = {
       'markdown-it-plantuml'
     ]
   },
+  
 
 
   /*
