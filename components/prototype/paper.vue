@@ -1,125 +1,89 @@
-<template>
-    <div>
-        <canvas id="myCanvas" resize></canvas>
-        <canvas id="secondCanvas" resize></canvas>
-        <canvas id="thirdCanvas" resize></canvas>
-    </div>
+<template lang="pug">
+  canvas(:id="id")
 </template>
+<style>
+#thirdCanvas {
+    border-radius: 100%;
+    background: lightgray;
+}
+</style>
+
 <script>
 export default {
+    props: [
+        "x",
+        "y",
+        "r",
+        "id"
+    ],
     data: function() {
         return {
-            original: {
-                start: 100,
-                target: 70,
-                sizeSmall: 15,
-                sizeMedium: 30,
-                sizeLarge: 45,
-                sizeXL: 60
-            },
-            twotango: {
-                start: 100,
-                starttwo: 85,
-                startthree: 100,
-                startfour: 85,
-                target: 70,
-                sizeSmall: 15,
-                sizeMedium: 30,
-                sizeLarge: 45,
-                sizeXL: 60
-            },
-            mini: {
-                start: 100,
-                starttwo: 85,
-                startthree: 100,
-                startfour: 85,
-                target: 70,
-                sizeSmall: 15,
-                sizeMedium: 30,
-                sizeLarge: 45,
-                sizeXL: 60
-            },
+            circles: [
+                {
+                    x: 150,
+                    y: 150,
+                    r: 30
+                },
+                {
+                    x: 150,
+                    y: 150,
+                    r: 15
+                },
+                {
+                    x: 150,
+                    y: 150,
+                    r: 60
+                }
+            ]
             
         }
     },
     mounted: function(){
         console.log('Hello from Paper')
         const paper = require('paper')
-        let s = this.original
+        let circles = this.circles
         // Get a reference to the canvas object
-		var canvas = document.getElementById('myCanvas');
-		// Create an empty project and a view for the canvas:
-		paper.setup(canvas);
-		// Create a Paper.js Path to draw a line into it:
-		var path = new paper.Path.Circle(new paper.Point(s.start, s.target), s.sizeLarge);
-		// Give the stroke a color
-		path.strokeColor = 'black';
-
-	    var path = new paper.Path.Circle(new paper.Point(s.start, s.target), s.sizeMedium);
-		// Give the stroke a color
-		path.strokeColor = 'black';
-
-        var path = new paper.Path.Circle(new paper.Point(s.start, s.target), s.sizeSmall);
-		// Give the stroke a color
-        path.strokeColor = 'black';
-        
-         var path = new paper.Path.Circle(new paper.Point(s.start, s.target), s.sizeXL);
-		// Give the stroke a color
-		path.strokeColor = 'black';
-
-
-         let t = this.twotango
-        // Get a reference to the canvas object
-		var canvas = document.getElementById('secondCanvas');
+        let canvas = document.getElementById('thirdCanvas');
+        let cW = 300
+        let cH = 300
+        canvas.width  = cW;
+        canvas.height = cH;
+        let cWC = cW / 2
+        let cHC = cH / 2
 		// Create an empty project and a view for the canvas:
         paper.setup(canvas);
+        
+        circles.forEach(function(circle){
+            let center, x, y, r
+            center = cHC
+            x = circle.x
+            y = circle.y
+            r = circle.r
 
-        // Create a Paper.js Path to draw a line into it:
+            // Create a Paper.js Path to draw a line into it:
+            var path = new paper.Path.Circle(new paper.Point(x, y), r);
+            path.strokeColor = 'black';
+        })
 
-         var path = new paper.Path.Circle(new paper.Point(t.start, t.target), t.sizeXL);
+        /* // Create a Paper.js Path to draw a line into it:
+         var path = new paper.Path.Circle(new paper.Point(x, y), r);
 		// Give the stroke a color
         path.strokeColor = 'black';
         
-		var path = new paper.Path.Circle(new paper.Point(t.starttwo, t.target), t.sizeLarge);
+		var path = new paper.Path.Circle(new paper.Point(cHC, m.target), m.sizeLarge);
 		// Give the stroke a color
 		path.strokeColor = 'black';
 
-	    var path = new paper.Path.Circle(new paper.Point(t.startthree, t.target), t.sizeMedium);
+	    var path = new paper.Path.Circle(new paper.Point(cHC, m.target), m.sizeMedium);
 		// Give the stroke a color
 		path.strokeColor = 'black';
 
-        var path = new paper.Path.Circle(new paper.Point(t.startfour, t.target), t.sizeSmall);
+        var path = new paper.Path.Circle(new paper.Point(cHC, m.target), m.sizeSmall);
 		// Give the stroke a color
-        path.strokeColor = 'black';
-        
-        
-        let m = this.mini
-        // Get a reference to the canvas object
-		var canvas = document.getElementById('thirdCanvas');
-		// Create an empty project and a view for the canvas:
-        paper.setup(canvas);
-
-        // Create a Paper.js Path to draw a line into it:
-
-         var path = new paper.Path.Circle(new paper.Point(m.start, m.target), m.sizeXL);
-		// Give the stroke a color
-        path.strokeColor = 'black';
-        
-		var path = new paper.Path.Circle(new paper.Point(m.starttwo, m.target), m.sizeLarge);
-		// Give the stroke a color
-		path.strokeColor = 'black';
-
-	    var path = new paper.Path.Circle(new paper.Point(m.startthree, m.target), m.sizeMedium);
-		// Give the stroke a color
-		path.strokeColor = 'black';
-
-        var path = new paper.Path.Circle(new paper.Point(m.startfour, m.target), m.sizeSmall);
-		// Give the stroke a color
-        path.strokeColor = 'black';
+        path.strokeColor = 'black'; */
 
     	// Draw the view now:
 		paper.view.draw();
-
     },
     
 }

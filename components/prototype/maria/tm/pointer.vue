@@ -10,7 +10,7 @@ import AuxSwitcher from '~/components/custom/AuxSwitcher.vue'
 import {
   userData,
   wasClicked
-} from '~/components/tm/index.js'
+} from '~/assets/js/tm-pointer.js'
 
 let u = userData.mailchimp
 let s = userData.influx
@@ -85,7 +85,7 @@ export default {
         },
         updatePulse(pulse) {
             this.pulse = pulse
-            this.$store.commit('history/add', pulse)
+            // this.$store.commit('history/add', pulse)
         }
     }
 }
